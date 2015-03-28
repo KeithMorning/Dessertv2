@@ -21,6 +21,10 @@
     #import "NSMutableString+Common.h"
 #endif
 
+///THe notification center name
+#define kBlogContentLoadCompelte @"BlogContentLoadCompelte"
+#define kBlogUserInfoLoadCompelte @"BlogUserInfoLoadCompelte"
+
 //常用变量
 #define DebugLog(s, ...) NSLog(@"%s(%d): %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
 #endif

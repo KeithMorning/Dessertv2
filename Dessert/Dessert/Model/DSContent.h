@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 keith. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+//#import <Foundation/Foundation.h>
 #import "DSUser.h"
 @interface DSContent : NSObject
 @property(nonatomic)NSString *text;
@@ -14,9 +14,10 @@
 @property(nonatomic)DSUser *user;
 @property(nonatomic)int authorid;
 @property(nonatomic)int cid;
++ (void)RequestContent;
 @end
 
 @interface DSContents : DSContent
 @property(nonatomic)NSArray *contents;
--(void)getFromApi:(NSUInteger)numberend;
+
 @end
