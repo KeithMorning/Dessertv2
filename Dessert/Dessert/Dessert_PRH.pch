@@ -1,0 +1,26 @@
+//
+//  Dessert_PRH.pch
+//  Dessert
+//
+//  Created by keith on 15/3/22.
+//  Copyright (c) 2015年 keith. All rights reserved.
+//
+
+
+#ifndef Dessert_Dessert_PRH_pch
+#define Dessert_Dessert_PRH_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import "APIUrl.h"
+    #import "NSString+Common.h"
+    #import "NSMutableString+Common.h"
+#endif
+
+//常用变量
+#define DebugLog(s, ...) NSLog(@"%s(%d): %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+#endif
