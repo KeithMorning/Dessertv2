@@ -21,6 +21,7 @@
     [self initlizeControl];
 }
 - (void)initlizeControl{
+    [self.tableView setBackgroundColor:[UIColor lightGrayColor]];
     _myrefreshControl = [[UIRefreshControl alloc]init];
     [_myrefreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = _myrefreshControl;

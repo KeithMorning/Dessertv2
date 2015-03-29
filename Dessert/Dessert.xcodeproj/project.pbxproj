@@ -871,6 +871,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 84D42DE750BD585EA5AE3BAF /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Dessert/Dessert_PRH.pch;
@@ -885,6 +886,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ECF0BA536EDD6583E28E7727 /* Pods.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Dessert/Dessert_PRH.pch;

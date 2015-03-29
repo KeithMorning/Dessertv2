@@ -24,6 +24,7 @@
 - (instancetype)initWithItItentifier:(NSString *)cellIndetifier{
     BlogBaseTableViewCell *cell =[[[NSBundle mainBundle]loadNibNamed:@"BlogBaseTableViewCell" owner:nil options:nil]lastObject];
     [cell setRestorationIdentifier:cellIndetifier];
+    //[cell setBackgroundColor:[UIColor lightGrayColor]];
     //username,time,scores,voteFlag
     return cell;
 }
