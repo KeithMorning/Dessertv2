@@ -8,10 +8,12 @@
 
 #import "BlogBaseTableViewController.h"
 #import "BlogBaseTableViewCell.h"
+#import "BlogDetailViewController.h"
 #import "DSContent.h"
 @interface BlogBaseTableViewController ()
 @property(nonatomic,strong)UIRefreshControl *myrefreshControl;
 @property (nonatomic,strong)NSArray *BlogContents;
+@property (nonatomic,strong) DSContent *currentContent;
 @end
 
 @implementation BlogBaseTableViewController
@@ -69,6 +71,22 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return [BlogBaseTableViewCell cellHeight];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    _currentContent = _BlogContents[indexPath.row];
+    if (_currentContent) {
+        [self performSegueWithIdentifier:@"toBlogDetailSG" sender:_currentContent];
+    }
+}
+
+#pragma mark- to blog detail
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    if ([segue.identifier  isEqual: @"toBlogDetailSG"]) {
+        BlogDetailViewController *blogDetailVC = (BlogDetailViewController *)segue.destinationViewController;
+        blogDetailVC.ContentDetail = _currentContent;
+    }
 }
 
 /*

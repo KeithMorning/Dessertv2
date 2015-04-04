@@ -126,10 +126,40 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Dessert" id="gmg-rf-st8"/>
+                    <connections>
+                        <segue destination="rQU-pU-1jR" kind="show" identifier="toBlogDetailSG" id="DCo-7s-a6f"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbn-Qn-kqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024" y="-142"/>
+            <point key="canvasLocation" x="806" y="-142"/>
+        </scene>
+        <!--Blog Detail View Controller-->
+        <scene sceneID="DOA-qz-OyQ">
+            <objects>
+                <tableViewController id="rQU-pU-1jR" customClass="BlogDetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BC5-bT-tIF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TcK-vX-MTH">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TcK-vX-MTH" id="buP-0U-sWb">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rQU-pU-1jR" id="Ct2-2y-8UJ"/>
+                            <outlet property="delegate" destination="rQU-pU-1jR" id="8Pq-U1-sq5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hjP-DK-Awy"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Nq-PQ-dGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="-142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wJU-CX-QWr">

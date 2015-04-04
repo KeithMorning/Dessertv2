@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLable;
 @property (weak, nonatomic) IBOutlet UILabel *titleLable;
 @property (weak, nonatomic) IBOutlet UILabel *contentLable;
+@property (nonatomic,strong) DSContent *content;
 - (instancetype)initWithItItentifier:(NSString *)cellIndetifier;
 - (void)setModelValue:(DSContent *)Model;
 + (CGFloat)cellHeight;

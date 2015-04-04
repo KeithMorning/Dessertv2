@@ -16,7 +16,7 @@
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+    [super setSelected:NO animated:animated];
 
     // Configure the view for the selected state
 }
@@ -25,12 +25,13 @@
     BlogBaseTableViewCell *cell =[[[NSBundle mainBundle]loadNibNamed:@"BlogBaseTableViewCell" owner:nil options:nil]lastObject];
     [cell setRestorationIdentifier:cellIndetifier];
     //[cell setBackgroundColor:[UIColor lightGrayColor]];
-    //username,time,scores,voteFlag
     return cell;
 }
 -(void)setModelValue:(DSContent *)Model{
+    _content = Model;
     self.titleLable.text = Model.title;
     self.contentLable.text =[[[MKToPainText alloc]init]MKToText: Model.text];
+        //username,time,scores,voteFlag
 }
 
 + (CGFloat)cellHeight{

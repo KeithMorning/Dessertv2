@@ -23,6 +23,7 @@
     [[DSNetClient shareClient]requestJsonWithPath:Contents withParams:nil withMethodType:Get andBlock:^(id data, NSError *error) {
         
         NSDictionary *dict=[data objectForKey:@"Contents"];
+       
         if (dict) {
             NSArray *contentDits= [data objectForKey:@"Contents"];
             NSMutableArray *contentArray=[NSMutableArray array];
@@ -33,6 +34,7 @@
         }
         else{
             block(nil,error);
+            NSLog(@"DSNetAPIManager line37: %@",error);
         }
     }];
     

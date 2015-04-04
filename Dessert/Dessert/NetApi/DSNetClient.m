@@ -19,16 +19,16 @@
 }
 
 -(void)requestJsonWithPath:(NSString *)apath withParams:(NSDictionary *)params withMethodType:(int)NetworkMethod andBlock:(void (^)(id, NSError *))block{
-    DebugLog(@"\n========request=======\n%@:\n%@",apath,params);
+    DebugLog(@"\n========request=======\n(apath)%@:\n(params)%@",apath,params);
     //log the request
     switch (NetworkMethod) {
         case Get:
             [self GET:apath parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                DebugLog(@"\n=========response============\n%@\%@",apath,params);
+                DebugLog(@"\n=========response============\n(apath):%@:\n(params)%@",apath,params);
                 //id error=[self han]
                 block(responseObject,nil);
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                DebugLog(@"\n=========response============\n%@\%@",apath,params);
+                DebugLog(@"\n=========response============\n(apath):%@:\n(params)%@",apath,params);
                 block(nil,error);
             }];
             break;
