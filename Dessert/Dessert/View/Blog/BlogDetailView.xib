@@ -49,14 +49,6 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmO-up-DDn" customClass="TTTAttributedLabel">
-                    <rect key="frame" x="46" y="16" width="481" height="200"/>
-                    <string key="text">sert[1694:35065] Unable to simultaneously satisfy constraints.
-	Probably at least one of the constraints in the following list is one you don't want. Try this: (1) look at each constraint and try to figure out which you don't expect; (2) fi</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000-00-00 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gg-eU-mHe" customClass="TTTAttributedLabel">
                     <rect key="frame" x="400" y="223" width="127" height="22"/>
                     <constraints>
@@ -77,6 +69,14 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmO-up-DDn" customClass="TTTAttributedLabel">
+                    <rect key="frame" x="46" y="8" width="481" height="208"/>
+                    <string key="text">sert[1694:35065] Unable to simultaneously satisfy constraints.
+	Probably at least one of the constraints in the following list is one you don't want. Try this: (1) look at each constraint and try to figure out which you don't expect; (2) fi</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -89,7 +89,7 @@
                 <constraint firstItem="rbR-Qo-LNw" firstAttribute="top" secondItem="lFZ-dH-SeK" secondAttribute="bottom" constant="-4" id="V95-7w-NpD"/>
                 <constraint firstAttribute="bottom" secondItem="kmO-up-DDn" secondAttribute="bottom" constant="32" id="bnm-6l-BPV"/>
                 <constraint firstAttribute="bottom" secondItem="4Gg-eU-mHe" secondAttribute="bottom" constant="3" id="hhC-aV-oup"/>
-                <constraint firstItem="kmO-up-DDn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="i7A-Pu-vxK"/>
+                <constraint firstItem="kmO-up-DDn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="i7A-Pu-vxK"/>
                 <constraint firstItem="YfA-us-7bF" firstAttribute="centerY" secondItem="4Gg-eU-mHe" secondAttribute="centerY" constant="0.5" id="iXY-g5-VXY"/>
                 <constraint firstItem="lFZ-dH-SeK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="l1V-vU-6Eu"/>
                 <constraint firstItem="4Gg-eU-mHe" firstAttribute="leading" secondItem="YfA-us-7bF" secondAttribute="trailing" constant="8" id="tuw-g4-IG6"/>
