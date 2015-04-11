@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D58CA05E88EA9F4E7F83EA5E"
+               BlueprintIdentifier = "18A5EBA4539DD5EAE5895B15"
                BuildableName = "libPods-PPiAwesomeButton.a"
                BlueprintName = "Pods-PPiAwesomeButton"
                ReferencedContainer = "container:Pods.xcodeproj">

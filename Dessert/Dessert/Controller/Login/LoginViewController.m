@@ -28,7 +28,7 @@
 }
 - (IBAction)LoginClick:(id)sender {
     if ([self CheckPassWord]) {
-        [self performSegueWithIdentifier:@"toBlogBaseSG" sender:nil];
+        [self performSegueWithIdentifier:@"toMainVC" sender:nil];
     }
 }
 

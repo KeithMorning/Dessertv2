@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -26,7 +26,7 @@
                         <state key="highlighted" image="arrowUp.png"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-jA-OrS">
-                        <rect key="frame" x="8" y="50" width="29" height="30"/>
+                        <rect key="frame" x="8" y="49" width="29" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="qaB-qn-pW1"/>
                             <constraint firstAttribute="width" constant="29" id="wH6-5S-8TG"/>
@@ -52,8 +52,12 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73l-aD-ZTN">
-                        <rect key="frame" x="10" y="33" width="27" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73l-aD-ZTN">
+                        <rect key="frame" x="8" y="33" width="29" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="W4a-yX-DGW"/>
+                            <constraint firstAttribute="width" constant="29" id="nf8-Nl-gX8"/>
+                        </constraints>
                         <attributedString key="attributedText">
                             <fragment content="22">
                                 <attributes>
@@ -66,7 +70,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQS-8O-lkr">
-                        <rect key="frame" x="45" y="41" width="413" height="39"/>
+                        <rect key="frame" x="45" y="40" width="413" height="39"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="39" id="5Is-bV-C4V"/>
                         </constraints>
@@ -76,10 +80,12 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="73l-aD-ZTN" firstAttribute="top" secondItem="ygc-B2-ail" secondAttribute="bottom" constant="-5" id="2Mt-Di-LRR"/>
                     <constraint firstItem="YQS-8O-lkr" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="5Rb-oq-lGB"/>
                     <constraint firstItem="ygc-B2-ail" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="7SF-ob-zOB"/>
                     <constraint firstItem="YQS-8O-lkr" firstAttribute="leading" secondItem="gFb-jA-OrS" secondAttribute="trailing" constant="8" id="9i2-VC-ET8"/>
                     <constraint firstItem="i26-9w-XtX" firstAttribute="leading" secondItem="ygc-B2-ail" secondAttribute="trailing" constant="8" id="Bbx-mp-Ddp"/>
+                    <constraint firstItem="73l-aD-ZTN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Dki-j7-OA4"/>
                     <constraint firstItem="gFb-jA-OrS" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Pw9-sS-yod"/>
                     <constraint firstItem="ygc-B2-ail" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="TW0-nN-8Pl"/>
                     <constraint firstItem="gFb-jA-OrS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="otp-Kz-YTi"/>

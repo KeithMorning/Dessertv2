@@ -37,6 +37,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"test"];
+    cell.textLabel.text = @"评论";
+    cell.detailTextLabel.text = @"评论内容 ...";
     return cell;
 }
 
@@ -45,7 +47,7 @@
     frame.size.height = [_DetailView GetHeaderHight];
     _DetailView = [[BlogDetailView alloc]initWithFrame:frame withModle:_ContentDetail];
     self.tableView.tableHeaderView = _DetailView;
-    NSLog(@"%f",self.tableView.tableHeaderView.frame.size.height);
+   // NSLog(@"%f",self.tableView.tableHeaderView.frame.size.height);
 }
 /*
 #pragma mark - Navigation

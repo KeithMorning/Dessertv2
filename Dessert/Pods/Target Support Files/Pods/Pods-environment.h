@@ -6,6 +6,12 @@
 // project.
 
 
+// AMSlideMenu
+#define COCOAPODS_POD_AVAILABLE_AMSlideMenu
+#define COCOAPODS_VERSION_MAJOR_AMSlideMenu 1
+#define COCOAPODS_VERSION_MINOR_AMSlideMenu 5
+#define COCOAPODS_VERSION_PATCH_AMSlideMenu 3
+
 // APParallaxHeader
 #define COCOAPODS_POD_AVAILABLE_APParallaxHeader
 #define COCOAPODS_VERSION_MAJOR_APParallaxHeader 0
