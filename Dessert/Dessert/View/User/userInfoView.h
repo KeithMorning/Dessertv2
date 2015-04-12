@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DSUser.h"
 @interface userInfoView : UIView
 @property (weak, nonatomic) IBOutlet UIImageView *backGroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *followButton;
 @property (weak, nonatomic) IBOutlet UIButton *fansButton;
 @property (weak, nonatomic) IBOutlet UILabel *userDescription;
-
+-(instancetype)initWithFrame:(CGRect)frame userHeaderModel:(DSUser *)user;
++(CGFloat)getHeaderHeight;
 @end

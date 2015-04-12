@@ -328,7 +328,7 @@ static NSMutableArray *allInstances;
             [self performSegueWithIdentifier:@"leftMenu" sender:self];
 
             @try {
-               // [self performSegueWithIdentifier:@"rightMenu" sender:self];
+                [self performSegueWithIdentifier:@"rightMenu" sender:self];
             }
             @catch (NSException *exception) {
                 

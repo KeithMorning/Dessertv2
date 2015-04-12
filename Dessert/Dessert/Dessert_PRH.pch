@@ -20,6 +20,8 @@
     #import "NSString+Common.h"
     #import "NSMutableString+Common.h"
     #import "DSTextCGSize.h"
+    #import "UIColor+CreateMethods.h"
+    #import "UIImageView+comm.h"
 #endif
 
 ///THe notification center name

@@ -7,15 +7,19 @@
 //
 
 #import "userInfoView.h"
-#import "DSUser.h"
 @implementation userInfoView
 
 -(instancetype)initWithFrame:(CGRect)frame userHeaderModel:(DSUser *)user{
-    self = [[[NSBundle mainBundle]loadNibNamed:@"userInfoView" owner:self options:nil] lastObject];
+    self = [[[NSBundle mainBundle]loadNibNamed:@"userInfoView" owner:nil options:nil] lastObject];
     if (self) {
         self.frame = frame;
         //view model save here
     }
+    [self.userImageView doCircleFrame];
     return  self;
+}
+
++(CGFloat)getHeaderHeight{
+    return 200;
 }
 @end
