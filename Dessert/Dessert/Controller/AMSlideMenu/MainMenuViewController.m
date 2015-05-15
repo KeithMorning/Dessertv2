@@ -33,6 +33,9 @@
         case 1:
             identifier = @"User";
             break;
+        case 2:
+            identifier = @"UserCase";
+            break;
     }
     return identifier;
 }

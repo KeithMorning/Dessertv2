@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5A130540E5332FAEEBD4FD61"
+               BlueprintIdentifier = "2859E013C6AB95302EA41D2D"
                BuildableName = "libPods-NYXImagesKit.a"
                BlueprintName = "Pods-NYXImagesKit"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -82,6 +82,12 @@
 		533976251AD42D4C002FAD85 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 533976241AD42D4C002FAD85 /* LeftMenuViewController.m */; };
 		533976281AD42F31002FAD85 /* simpleMenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 533976261AD42F31002FAD85 /* simpleMenuButton.png */; };
 		533976291AD42F31002FAD85 /* simpleMenuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 533976271AD42F31002FAD85 /* simpleMenuButton@2x.png */; };
+		535159001AF992F50045B509 /* DSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 535158FF1AF992F50045B509 /* DSFileManager.m */; };
+		535159021AF9935B0045B509 /* aticlelist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 535159011AF9935B0045B509 /* aticlelist.plist */; };
+		535159051AF999F40045B509 /* DSPoster.m in Sources */ = {isa = PBXBuildFile; fileRef = 535159041AF999F40045B509 /* DSPoster.m */; };
+		535159081AF99A040045B509 /* DSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 535159071AF99A040045B509 /* DSComment.m */; };
+		5351590B1AF99E5F0045B509 /* DSPosterDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5351590A1AF99E5F0045B509 /* DSPosterDAO.m */; };
+		5351590E1AFC3A690045B509 /* DSSplitCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5351590D1AFC3A690045B509 /* DSSplitCaseViewController.m */; };
 		5370EA2A1AC8489300A1AC2B /* BlogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5370EA291AC8489300A1AC2B /* BlogDetailViewController.m */; };
 		5370EA311AC84AB100A1AC2B /* DSBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5370EA301AC84AB100A1AC2B /* DSBaseTableViewController.m */; };
 		5381D4051AD8AC70004A4ADF /* BlogBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5381D4001AD8AC70004A4ADF /* BlogBaseTableViewCell.m */; };
@@ -94,6 +100,8 @@
 		53978C191ADA999C000982C8 /* userExperienceHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53978C181ADA999C000982C8 /* userExperienceHeaderView.m */; };
 		53978C1C1ADA9CA3000982C8 /* userSkillHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53978C1B1ADA9CA3000982C8 /* userSkillHeaderView.m */; };
 		53978C1E1ADA9CB7000982C8 /* userSkillHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53978C1D1ADA9CB7000982C8 /* userSkillHeaderView.xib */; };
+		53A35C6C1AE3397B00CDE69E /* UserCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A35C6B1AE3397B00CDE69E /* UserCaseViewController.m */; };
+		53A35C6F1AE33E5F00CDE69E /* DoctorActicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A35C6E1AE33E5F00CDE69E /* DoctorActicleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +258,17 @@
 		533976241AD42D4C002FAD85 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		533976261AD42F31002FAD85 /* simpleMenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simpleMenuButton.png; sourceTree = "<group>"; };
 		533976271AD42F31002FAD85 /* simpleMenuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simpleMenuButton@2x.png"; sourceTree = "<group>"; };
+		535158FE1AF992F50045B509 /* DSFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFileManager.h; sourceTree = "<group>"; };
+		535158FF1AF992F50045B509 /* DSFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFileManager.m; sourceTree = "<group>"; };
+		535159011AF9935B0045B509 /* aticlelist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = aticlelist.plist; sourceTree = "<group>"; };
+		535159031AF999F40045B509 /* DSPoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPoster.h; sourceTree = "<group>"; };
+		535159041AF999F40045B509 /* DSPoster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPoster.m; sourceTree = "<group>"; };
+		535159061AF99A040045B509 /* DSComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSComment.h; sourceTree = "<group>"; };
+		535159071AF99A040045B509 /* DSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSComment.m; sourceTree = "<group>"; };
+		535159091AF99E5F0045B509 /* DSPosterDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPosterDAO.h; sourceTree = "<group>"; };
+		5351590A1AF99E5F0045B509 /* DSPosterDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPosterDAO.m; sourceTree = "<group>"; };
+		5351590C1AFC3A690045B509 /* DSSplitCaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSplitCaseViewController.h; sourceTree = "<group>"; };
+		5351590D1AFC3A690045B509 /* DSSplitCaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSplitCaseViewController.m; sourceTree = "<group>"; };
 		5370EA281AC8489300A1AC2B /* BlogDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogDetailViewController.h; sourceTree = "<group>"; };
 		5370EA291AC8489300A1AC2B /* BlogDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogDetailViewController.m; sourceTree = "<group>"; };
 		5370EA2F1AC84AB100A1AC2B /* DSBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSBaseTableViewController.h; sourceTree = "<group>"; };
@@ -269,6 +288,10 @@
 		53978C1A1ADA9CA3000982C8 /* userSkillHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userSkillHeaderView.h; sourceTree = "<group>"; };
 		53978C1B1ADA9CA3000982C8 /* userSkillHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userSkillHeaderView.m; sourceTree = "<group>"; };
 		53978C1D1ADA9CB7000982C8 /* userSkillHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userSkillHeaderView.xib; sourceTree = "<group>"; };
+		53A35C6A1AE3397B00CDE69E /* UserCaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCaseViewController.h; sourceTree = "<group>"; };
+		53A35C6B1AE3397B00CDE69E /* UserCaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCaseViewController.m; sourceTree = "<group>"; };
+		53A35C6D1AE33E5F00CDE69E /* DoctorActicleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorActicleViewController.h; sourceTree = "<group>"; };
+		53A35C6E1AE33E5F00CDE69E /* DoctorActicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorActicleViewController.m; sourceTree = "<group>"; };
 		84D42DE750BD585EA5AE3BAF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ECF0BA536EDD6583E28E7727 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -366,6 +389,7 @@
 		5307EAC31ABECE9300441823 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				53A35C691AE3395A00CDE69E /* UserCase */,
 				53279CFF1AD8F0BC00593E17 /* UserInfo */,
 				5339761F1AD42CDC002FAD85 /* AMSlideMenu */,
 				5370EA2E1AC84AB100A1AC2B /* BaseController */,
@@ -391,6 +415,10 @@
 				5307EAE41AC453DC00441823 /* DSUser.h */,
 				5307EAE51AC453DC00441823 /* DSUser.m */,
 				5307EAEA1AC4796D00441823 /* ModelHeader.h */,
+				535159031AF999F40045B509 /* DSPoster.h */,
+				535159041AF999F40045B509 /* DSPoster.m */,
+				535159061AF99A040045B509 /* DSComment.h */,
+				535159071AF99A040045B509 /* DSComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -493,6 +521,7 @@
 				533976271AD42F31002FAD85 /* simpleMenuButton@2x.png */,
 				5307EB041AC69D5D00441823 /* arrowDown.png */,
 				5307EB051AC69D5D00441823 /* arrowUp.png */,
+				535159011AF9935B0045B509 /* aticlelist.plist */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -596,6 +625,7 @@
 		533306EA1ABDC0230054BA9E /* Dessert */ = {
 			isa = PBXGroup;
 			children = (
+				535158FD1AF992CA0045B509 /* DessertFileManager */,
 				5307EB031AC69D5D00441823 /* resource */,
 				5307EACD1ABEE6DB00441823 /* Dessert_PRH.pch */,
 				5307EAC31ABECE9300441823 /* Controller */,
@@ -652,6 +682,17 @@
 			path = AMSlideMenu;
 			sourceTree = "<group>";
 		};
+		535158FD1AF992CA0045B509 /* DessertFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				535158FE1AF992F50045B509 /* DSFileManager.h */,
+				535158FF1AF992F50045B509 /* DSFileManager.m */,
+				535159091AF99E5F0045B509 /* DSPosterDAO.h */,
+				5351590A1AF99E5F0045B509 /* DSPosterDAO.m */,
+			);
+			path = DessertFileManager;
+			sourceTree = "<group>";
+		};
 		5370EA2E1AC84AB100A1AC2B /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -702,6 +743,19 @@
 			);
 			name = User;
 			path = View/User;
+			sourceTree = "<group>";
+		};
+		53A35C691AE3395A00CDE69E /* UserCase */ = {
+			isa = PBXGroup;
+			children = (
+				53A35C6A1AE3397B00CDE69E /* UserCaseViewController.h */,
+				53A35C6B1AE3397B00CDE69E /* UserCaseViewController.m */,
+				53A35C6D1AE33E5F00CDE69E /* DoctorActicleViewController.h */,
+				53A35C6E1AE33E5F00CDE69E /* DoctorActicleViewController.m */,
+				5351590C1AFC3A690045B509 /* DSSplitCaseViewController.h */,
+				5351590D1AFC3A690045B509 /* DSSplitCaseViewController.m */,
+			);
+			path = UserCase;
 			sourceTree = "<group>";
 		};
 		55741C53E0E6E03A86B5DE55 /* Frameworks */ = {
@@ -809,6 +863,7 @@
 				5381D40C1AD8AE80004A4ADF /* userInfoView.xib in Resources */,
 				533306F91ABDC0230054BA9E /* Images.xcassets in Resources */,
 				5381D4081AD8AC70004A4ADF /* BlogDetailView.xib in Resources */,
+				535159021AF9935B0045B509 /* aticlelist.plist in Resources */,
 				53978C1E1ADA9CB7000982C8 /* userSkillHeaderView.xib in Resources */,
 				5307EB061AC69D5D00441823 /* arrowDown.png in Resources */,
 				5381D4061AD8AC70004A4ADF /* BlogBaseTableViewCell.xib in Resources */,
@@ -862,6 +917,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				535159001AF992F50045B509 /* DSFileManager.m in Sources */,
 				5307EAEB1AC47A0E00441823 /* ModelHeader.h in Sources */,
 				5307EADC1ABF07A100441823 /* NSMutableString+Common.m in Sources */,
 				5307EB411AC6D62D00441823 /* UIView+WebCacheOperation.m in Sources */,
@@ -879,6 +935,7 @@
 				5307EB3B1AC6D62D00441823 /* SDWebImagePrefetcher.m in Sources */,
 				5307EAB91ABEBE7F00441823 /* AFURLResponseSerialization.m in Sources */,
 				5307EAB71ABEBE7F00441823 /* AFURLConnectionOperation.m in Sources */,
+				53A35C6C1AE3397B00CDE69E /* UserCaseViewController.m in Sources */,
 				5307EABE1ABEBE7F00441823 /* UIButton+AFNetworking.m in Sources */,
 				5307EB501AC700CC00441823 /* DSDissmisSegue.m in Sources */,
 				533976251AD42D4C002FAD85 /* LeftMenuViewController.m in Sources */,
@@ -890,6 +947,7 @@
 				5307EB391AC6D62D00441823 /* SDWebImageDownloaderOperation.m in Sources */,
 				53051C9A1ACAE8B30055BC05 /* DSTextCGSize.m in Sources */,
 				5381D40F1AD8AEA1004A4ADF /* userInfoView.m in Sources */,
+				53A35C6F1AE33E5F00CDE69E /* DoctorActicleViewController.m in Sources */,
 				5307EB481AC6DD6500441823 /* YLImageView.m in Sources */,
 				5370EA311AC84AB100A1AC2B /* DSBaseTableViewController.m in Sources */,
 				5307EB371AC6D62D00441823 /* SDWebImageDecoder.m in Sources */,
@@ -910,12 +968,16 @@
 				5307EAE31AC06AAA00441823 /* DSContent.m in Sources */,
 				533976221AD42D19002FAD85 /* MainMenuViewController.m in Sources */,
 				5307EB3E1AC6D62D00441823 /* UIImage+MultiFormat.m in Sources */,
+				5351590E1AFC3A690045B509 /* DSSplitCaseViewController.m in Sources */,
+				535159081AF99A040045B509 /* DSComment.m in Sources */,
 				53279D141AD9DF7B00593E17 /* userActicleCellHeader.m in Sources */,
 				5307EAD91ABEFD3300441823 /* NSString+Common.m in Sources */,
 				5307EABD1ABEBE7F00441823 /* UIAlertView+AFNetworking.m in Sources */,
 				5307EB471AC6DD6500441823 /* YLGIFImage.m in Sources */,
+				5351590B1AF99E5F0045B509 /* DSPosterDAO.m in Sources */,
 				53279D061AD9075200593E17 /* userExpericeTableViewCell.m in Sources */,
 				5307EB341AC6D62D00441823 /* NSData+ImageContentType.m in Sources */,
+				535159051AF999F40045B509 /* DSPoster.m in Sources */,
 				5307EAB81ABEBE7F00441823 /* AFURLRequestSerialization.m in Sources */,
 				53279CF91AD8EDC400593E17 /* UIColor+CreateMethods.m in Sources */,
 				5307EAD41ABEFBDB00441823 /* HtmlMedia.m in Sources */,
@@ -1058,7 +1120,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Dessert/Dessert_PRH.pch;
 				INFOPLIST_FILE = Dessert/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1073,7 +1135,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Dessert/Dessert_PRH.pch;
 				INFOPLIST_FILE = Dessert/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

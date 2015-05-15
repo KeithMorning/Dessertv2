@@ -13,6 +13,7 @@
 #import "DSContent.h"
 #import "DSNetAPIManager.h"
 #import  <FontAwesome+iOS/NSString+FontAwesome.h>
+#import "DSPosterDAO.h"
 @interface DSTestVC()
 @property (weak, nonatomic) IBOutlet UILabel *LableTS;
 @property (nonatomic,copy) NSAttributedString *Attrstring;
@@ -39,5 +40,8 @@
 }
 - (IBAction)exit:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)testformodel:(id)sender {
+    [[DSPosterDAO shareManager] read];
 }
 @end

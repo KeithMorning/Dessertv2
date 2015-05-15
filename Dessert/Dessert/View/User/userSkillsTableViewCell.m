@@ -13,7 +13,7 @@
 - (void)awakeFromNib {
     // Initialization code
     [super awakeFromNib];
-    [self updateConstraintsIfNeeded];
+    //[self updateConstraintsIfNeeded];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -24,9 +24,11 @@
 -(instancetype)initWithSkill:(NSString *)skillName{
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"userSkillsTableViewCell"];
     if (self) {
-        DSSkillBox *skillBox = [[DSSkillBox alloc]initWithFrame:CGRectMake(10, 10, 50, 20) withNum:@"12" withSkil:skillName];
+        DSSkillBox *skillBox = [[DSSkillBox alloc]initWithFrame:CGRectMake(8, 8, 140,20) withNum:@"12" withSkil:skillName];
+        self.autoresizesSubviews=NO;
         [self addSubview:skillBox];
     }
+    
     return self;
 }
 @end

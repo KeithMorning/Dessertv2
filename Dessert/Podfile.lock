@@ -1,5 +1,5 @@
 PODS:
-  - AMSlideMenu (1.5.3)
+  - AMSlideMenu (1.5.4)
   - APParallaxHeader (0.1.6)
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
@@ -20,8 +20,8 @@ PODS:
   - hpple (0.2.0)
   - Masonry (0.5.3)
   - MBProgressHUD (0.9)
-  - MJExtension (0.2.0)
-  - MMMarkdown (0.4.1)
+  - MJExtension (2.0.2)
+  - MMMarkdown (0.4.3)
   - NYXImagesKit (2.3)
   - pop (1.0.7)
   - POP+MCAnimate (2.0.1):
@@ -79,23 +79,23 @@ DEPENDENCIES:
   - UIImage+BlurredFrame (= 0.0.4)
 
 SPEC CHECKSUMS:
-  AMSlideMenu: ab0c9313c74eac61e360d2a714d2d8202f6de916
-  APParallaxHeader: 6e7cc27c052be34e1a5655dc2fab6c40eecbbe55
-  BlocksKit: 4439e7f30a9f90743462ca63545a15c1f4304cef
-  FontAwesome+iOS: 816c20304edef4ca92835de669577005cbaaf261
-  hpple: f4eb7c21a8db83ec264e5d614ec7509e10e5adec
-  Masonry: 35368c2ca9577ca87722c12fc52c4bad9b1c1516
-  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
-  MJExtension: 4d179914dbec2b6ca826f8296181fc1d4013781e
-  MMMarkdown: c82c9024dd80f088312909023dd6d6d013bd668f
-  NYXImagesKit: 1c9f228ae78fab475d267b3b3a1308e0fba11731
-  pop: 2f14a1ea61339767af9e66741b418c831b3844df
-  POP+MCAnimate: 528a556e3754a0b406adc481b02ec2984cfd1032
-  PPiAwesomeButton: 9c57f5b72e3a36eaa4f5b811fbdb90913e5cdb21
-  ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
+  AMSlideMenu: 8571937703d2b8e187b22c1416be4cafc3532a11
+  APParallaxHeader: 854bc48a2487ca12c702f8a236fec0d89cdac5c3
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  FontAwesome+iOS: 9070b682a9255ca0fdc34bcfb129ad0ba2b73b87
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
+  Masonry: 9f515466afe48632562342a40a1c224071a1a022
+  MBProgressHUD: d8e7ea388dc1549a42e0d219067cf5f2c898fb66
+  MJExtension: d6cdbac494bdbb8943701944106ed57ada3ad773
+  MMMarkdown: faacc823952c6b63e85c6d2fd386f8ceab805430
+  NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  POP+MCAnimate: a99e209148c602512de487f1160a44bf78572024
+  PPiAwesomeButton: 16f7279582fd36f65186b24b83ef876217363eb5
+  ReactiveCocoa: 334468a83b2c5f669f7cfb9a084415ee23219b4f
   RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
-  TPKeyboardAvoiding: 925e1e1912597d1a4956697eec3bd9656552153c
-  TTTAttributedLabel: 94bb04f1e005616002dd2cee0262a0082e533627
-  UIImage+BlurredFrame: 0c38f5760d72125c47d16001a88faaac573bd35d
+  TPKeyboardAvoiding: 0a40dfbb0af7c8bdae1dd457496dccfd217d85f6
+  TTTAttributedLabel: c8f3801a6463b9c9b82b0c84c465fdda9751892a
+  UIImage+BlurredFrame: ad2f7195c6947ea3117c7d202f75a51958d5061a
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.37.0

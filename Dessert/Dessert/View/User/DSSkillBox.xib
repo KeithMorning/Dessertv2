@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,28 +14,30 @@
                     <rect key="frame" x="0.0" y="0.0" width="30" height="20"/>
                     <color key="backgroundColor" red="0.056896294610000002" green="0.67819324140000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="CdA-zL-9H9"/>
+                        <constraint firstAttribute="height" constant="20" id="A0a-4C-qwT"/>
+                        <constraint firstAttribute="width" constant="30" id="GK9-dA-1Op"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="能力1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDU-16-QQM">
-                    <rect key="frame" x="50" y="0.0" width="90" height="20"/>
+                    <rect key="frame" x="30" y="0.0" width="110" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="dbP-fF-ANG"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="PQN-bA-PW9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AIC-lA-tEd"/>
-                <constraint firstItem="xDU-16-QQM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ODs-gE-wxW"/>
-                <constraint firstAttribute="trailing" secondItem="xDU-16-QQM" secondAttribute="trailing" id="PwN-ht-Z5q"/>
-                <constraint firstAttribute="bottom" secondItem="xDU-16-QQM" secondAttribute="bottom" id="RdD-bX-vw7"/>
-                <constraint firstItem="xDU-16-QQM" firstAttribute="leading" secondItem="PQN-bA-PW9" secondAttribute="trailing" constant="20" id="hvu-kK-JK8"/>
-                <constraint firstItem="PQN-bA-PW9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="s7q-yo-Zp5"/>
-                <constraint firstAttribute="bottom" secondItem="PQN-bA-PW9" secondAttribute="bottom" id="sc1-Tw-B6I"/>
+                <constraint firstAttribute="trailing" secondItem="xDU-16-QQM" secondAttribute="trailing" id="0ma-Kd-BIw"/>
+                <constraint firstItem="PQN-bA-PW9" firstAttribute="centerY" secondItem="xDU-16-QQM" secondAttribute="centerY" id="DEd-g4-eIl"/>
+                <constraint firstItem="PQN-bA-PW9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JJM-2A-rEK"/>
+                <constraint firstItem="xDU-16-QQM" firstAttribute="leading" secondItem="PQN-bA-PW9" secondAttribute="trailing" id="Wzx-jF-1kf"/>
+                <constraint firstItem="PQN-bA-PW9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qJR-0M-54E"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

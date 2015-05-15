@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FB738EC70234F684709835BD"
+               BlueprintIdentifier = "B0E4C08060A4FEDF8090A506"
                BuildableName = "libPods-RegexKitLite.a"
                BlueprintName = "Pods-RegexKitLite"
                ReferencedContainer = "container:Pods.xcodeproj">

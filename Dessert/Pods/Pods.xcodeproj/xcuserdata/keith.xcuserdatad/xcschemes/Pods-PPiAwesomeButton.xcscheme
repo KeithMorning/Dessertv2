@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18A5EBA4539DD5EAE5895B15"
+               BlueprintIdentifier = "C6E014511F155E035A78DDF4"
                BuildableName = "libPods-PPiAwesomeButton.a"
                BlueprintName = "Pods-PPiAwesomeButton"
                ReferencedContainer = "container:Pods.xcodeproj">

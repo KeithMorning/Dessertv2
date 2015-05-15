@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9FE2E5622F63595743785DC8"
+               BlueprintIdentifier = "E475BA54B14921A81F6AD670"
                BuildableName = "libPods-UIImage+BlurredFrame.a"
                BlueprintName = "Pods-UIImage+BlurredFrame"
                ReferencedContainer = "container:Pods.xcodeproj">
