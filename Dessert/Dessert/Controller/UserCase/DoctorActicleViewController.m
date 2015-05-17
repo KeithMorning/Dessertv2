@@ -7,9 +7,11 @@
 //
 
 #import "DoctorActicleViewController.h"
+#import "ChatViewController.h"
+#import "UserCaseViewController.h"
 
 @interface DoctorActicleViewController ()
-
+@property (nonatomic,strong) UserCaseViewController *detailVc;
 @end
 
 @implementation DoctorActicleViewController
@@ -18,6 +20,8 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithHex:@"#E1F0F7" alpha:1.0];
     self.tableView.backgroundColor = [UIColor colorWithHex:@"#efefef" alpha:1.0];
+    UINavigationController *navController = (UINavigationController*)[self.splitViewController.viewControllers lastObject];
+    self.detailVc = (UserCaseViewController *)[navController.viewControllers lastObject];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -76,6 +80,40 @@
 
     return 130;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self openSessionByClientId:kBettyClientID navigationToIMWithTargetClientIDs:@[kMichaelClientID]];
+    
+}
+
+
+- (void)openSessionByClientId:(NSString*)clientId navigationToIMWithTargetClientIDs:(NSArray *)clientIDs {
+    WEAKSELF
+    [[LeanMessageManager manager] openSessionWithClientID:clientId completion:^(BOOL succeeded, NSError *error) {
+        if(!error){
+            ConversationType type;
+            if(clientIDs.count>1){
+                type=ConversationTypeGroup;
+            }else{
+                type=ConversationTypeOneToOne;
+            }
+            [[LeanMessageManager manager] createConversationsWithClientIDs:clientIDs conversationType:type completion:^(AVIMConversation *conversation, NSError *error) {
+                if(error){
+                    NSLog(@"error=%@",error);
+                }else{
+                    ChatViewController *vc=[[ChatViewController alloc] initWithConversation:conversation];
+                    //vc.view.frame = weakSelf.detailVc.view.bounds;
+                    //[weakSelf.detailVc.view addSubview:vc.view];
+                    [weakSelf.detailVc presentViewController:vc animated:YES completion:nil];
+                   
+                }
+            }];
+        }else{
+            NSLog(@"error=%@",error);
+        }
+    }];
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

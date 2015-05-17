@@ -53,6 +53,7 @@ static NSNumberFormatter *_numberFormatter;
 
 + (instancetype)objectWithKeyValues:(id)keyValues context:(NSManagedObjectContext *)context error:(NSError *__autoreleasing *)error
 {
+    if (keyValues == nil) return nil;
     if ([self isSubclassOfClass:[NSManagedObject class]] && context) {
         return [[NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass(self) inManagedObjectContext:context] setKeyValues:keyValues context:context error:error];
     }
@@ -110,11 +111,14 @@ static NSNumberFormatter *_numberFormatter;
     MJAssertError([keyValues isKindOfClass:[NSDictionary class]], self, error, @"keyValues参数不是一个字典");
     
     @try {
-        NSArray *ignoredPropertyNames = [[self class] totalIgnoredPropertyNames];
+        Class class = [self class];
+        NSArray *allowedPropertyNames = [class totalAllowedPropertyNames];
+        NSArray *ignoredPropertyNames = [class totalIgnoredPropertyNames];
         
         //通过封装的方法回调一个通过运行时编写的，用于返回属性列表的方法。
-        [[self class] enumeratePropertiesWithBlock:^(MJProperty *property, BOOL *stop) {
+        [class enumeratePropertiesWithBlock:^(MJProperty *property, BOOL *stop) {
             // 0.检测是否被忽略
+            if (allowedPropertyNames.count && ![allowedPropertyNames containsObject:property.name]) return;
             if ([ignoredPropertyNames containsObject:property.name]) return;
             
             // 1.取出属性值
@@ -264,17 +268,95 @@ static NSNumberFormatter *_numberFormatter;
 
 - (NSDictionary *)keyValuesWithError:(NSError *__autoreleasing *)error
 {
+    return [self keyValuesWithIgnoredKeys:nil error:error];
+}
+
+- (NSDictionary *)keyValuesWithKeys:(NSArray *)keys
+{
+    return [self keyValuesWithKeys:keys error:nil];
+}
+
+- (NSDictionary *)keyValuesWithIgnoredKeys:(NSArray *)ignoredKeys
+{
+    return [self keyValuesWithIgnoredKeys:ignoredKeys error:nil];
+}
+
+- (NSDictionary *)keyValuesWithKeys:(NSArray *)keys error:(NSError *__autoreleasing *)error
+{
+    return [self keyValuesWithKeys:keys ignoredKeys:nil error:error];
+}
+
+- (NSDictionary *)keyValuesWithIgnoredKeys:(NSArray *)ignoredKeys error:(NSError *__autoreleasing *)error
+{
+    return [self keyValuesWithKeys:nil ignoredKeys:ignoredKeys error:error];
+}
+
++ (NSArray *)keyValuesArrayWithObjectArray:(NSArray *)objectArray
+{
+    return [self keyValuesArrayWithObjectArray:objectArray error:nil];
+}
+
++ (NSArray *)keyValuesArrayWithObjectArray:(NSArray *)objectArray error:(NSError *__autoreleasing *)error
+{
+    return [self keyValuesArrayWithObjectArray:objectArray ignoredKeys:nil error:error];
+}
+
++ (NSArray *)keyValuesArrayWithObjectArray:(NSArray *)objectArray keys:(NSArray *)keys
+{
+    return [self keyValuesArrayWithObjectArray:objectArray keys:keys error:nil];
+}
+
++ (NSArray *)keyValuesArrayWithObjectArray:(NSArray *)objectArray ignoredKeys:(NSArray *)ignoredKeys
+{
+    return [self keyValuesArrayWithObjectArray:objectArray ignoredKeys:ignoredKeys error:nil];
+}
+
++ (NSArray *)keyValuesArrayWithObjectArray:(NSArray *)objectArray keys:(NSArray *)keys error:(NSError *__autoreleasing *)error
+{
+    return [self keyValuesArrayWithObjectArray:objectArray keys:keys ignoredKeys:nil error:error];
+}
+
++ (NSArray *)keyValuesArrayWithObjectArray:(NSArray *)objectArray ignoredKeys:(NSArray *)ignoredKeys error:(NSError *__autoreleasing *)error
+{
+    return [self keyValuesArrayWithObjectArray:objectArray keys:nil ignoredKeys:ignoredKeys error:error];
+}
+
+#pragma mark - 私有
++ (NSArray *)keyValuesArrayWithObjectArray:(NSArray *)objectArray keys:(NSArray *)keys ignoredKeys:(NSArray *)ignoredKeys error:(NSError *__autoreleasing *)error
+{
+    // 0.判断真实性
+    MJAssertError([objectArray isKindOfClass:[NSArray class]], nil, error, @"objectArray参数不是一个数组");
+    
+    // 1.创建数组
+    NSMutableArray *keyValuesArray = [NSMutableArray array];
+    for (id object in objectArray) {
+        if (keys) {
+            [keyValuesArray addObject:[object keyValuesWithKeys:keys error:error]];
+        } else {
+            [keyValuesArray addObject:[object keyValuesWithIgnoredKeys:ignoredKeys error:error]];
+        }
+    }
+    return keyValuesArray;
+}
+
+- (NSDictionary *)keyValuesWithKeys:(NSArray *)keys ignoredKeys:(NSArray *)ignoredKeys error:(NSError *__autoreleasing *)error
+{
     // 如果自己不是模型类
     if ([MJFoundation isClassFromFoundation:[self class]]) return (NSDictionary *)self;
     
     __block NSMutableDictionary *keyValues = [NSMutableDictionary dictionary];
     
     @try {
-        NSArray *ignoredPropertyNames = [[self class] totalIgnoredPropertyNames];
+        Class class = [self class];
+        NSArray *allowedPropertyNames = [class totalAllowedPropertyNames];
+        NSArray *ignoredPropertyNames = [class totalIgnoredPropertyNames];
         
-        [[self class] enumeratePropertiesWithBlock:^(MJProperty *property, BOOL *stop) {
+        [class enumeratePropertiesWithBlock:^(MJProperty *property, BOOL *stop) {
             // 0.检测是否被忽略
+            if (allowedPropertyNames.count && ![allowedPropertyNames containsObject:property.name]) return;
             if ([ignoredPropertyNames containsObject:property.name]) return;
+            if (keys.count && ![keys containsObject:property.name]) return;
+            if ([ignoredKeys containsObject:property.name]) return;
             
             // 1.取出属性值
             id value = [property valueFromObject:self];
@@ -312,6 +394,9 @@ static NSNumberFormatter *_numberFormatter;
             }];
         }];
         
+        // 去除系统自动增加的元素
+        [keyValues removeObjectsForKeys:@[@"superclass", @"debugDescription", @"description", @"hash"]];
+        
         // 转换完毕
         if ([self respondsToSelector:@selector(objectDidFinishConvertingToKeyValues)]) {
             [self objectDidFinishConvertingToKeyValues];
@@ -321,23 +406,5 @@ static NSNumberFormatter *_numberFormatter;
     }
     
     return keyValues;
-}
-
-+ (NSArray *)keyValuesArrayWithObjectArray:(NSArray *)objectArray
-{
-    return [self keyValuesArrayWithObjectArray:objectArray error:nil];
-}
-
-+ (NSArray *)keyValuesArrayWithObjectArray:(NSArray *)objectArray error:(NSError *__autoreleasing *)error
-{
-    // 0.判断真实性
-    MJAssertError([objectArray isKindOfClass:[NSArray class]], nil, error, @"objectArray参数不是一个数组");
-    
-    // 1.创建数组
-    NSMutableArray *keyValuesArray = [NSMutableArray array];
-    for (id object in objectArray) {
-        [keyValuesArray addObject:[object keyValuesWithError:error]];
-    }
-    return keyValuesArray;
 }
 @end

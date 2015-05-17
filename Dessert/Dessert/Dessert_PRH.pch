@@ -22,6 +22,7 @@
     #import "DSTextCGSize.h"
     #import "UIColor+CreateMethods.h"
     #import "UIImageView+comm.h"
+    #import "ACMacros.h"
 #endif
 
 ///THe notification center name
@@ -34,3 +35,7 @@
 //常用变量
 #define DebugLog(s, ...) NSLog(@"%s(%d): %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
 #endif
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+
+#define kApplicationId @"vcz6bokrijbxn9n3ban45meyf2x0dfqgwcx0b7tk8ia02wf6"
+#define kClientKey @"mqvr5w942idu0hox64xo96zmbiiaa26i89dp1dvwrpw4btq7"

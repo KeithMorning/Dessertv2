@@ -10,6 +10,8 @@
 	<string>Dessert</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>646fb212-6d06-11e3-a2a4-57cd746879f3++1155</key>
+		<string>svn://192.168.0.179/BloodSugar/BloodSugar_iOS_V1/Views/MJRefresh/MJRefresh.bundle</string>
 		<key>A789510E59385246AD5C5049423EE3F04AE5048D</key>
 		<string>https://github.com/KeithMorning/Dessertv2.git</string>
 	</dict>
@@ -17,8 +19,15 @@
 	<string>Dessert/Dessert.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>646fb212-6d06-11e3-a2a4-57cd746879f3++1155</key>
+		<string>../../Dessert/Dessert/Vendor/MJRefresh/MJRefresh.bundle</string>
 		<key>A789510E59385246AD5C5049423EE3F04AE5048D</key>
 		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>646fb212-6d06-11e3-a2a4-57cd746879f3++1155</key>
+		<string>svn://192.168.0.179/BloodSugar</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/KeithMorning/Dessertv2.git</string>
@@ -35,6 +44,14 @@
 			<string>A789510E59385246AD5C5049423EE3F04AE5048D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Dessertv2</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>646fb212-6d06-11e3-a2a4-57cd746879f3++1155</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MJRefresh.bundle</string>
 		</dict>
 	</array>
 </dict>

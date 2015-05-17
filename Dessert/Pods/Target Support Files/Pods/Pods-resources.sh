@@ -58,9 +58,11 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "AVOSCloud/iOS/release-v3.1.1.1/AVOSCloud.framework/AVOSCloud.bundle"
   install_resource "FontAwesome+iOS/Resources/FontAwesome.ttf"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "AVOSCloud/iOS/release-v3.1.1.1/AVOSCloud.framework/AVOSCloud.bundle"
   install_resource "FontAwesome+iOS/Resources/FontAwesome.ttf"
 fi
 

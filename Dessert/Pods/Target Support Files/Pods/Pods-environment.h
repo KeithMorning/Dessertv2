@@ -18,6 +18,34 @@
 #define COCOAPODS_VERSION_MINOR_APParallaxHeader 1
 #define COCOAPODS_VERSION_PATCH_APParallaxHeader 6
 
+// AVOSCloud
+#define COCOAPODS_POD_AVAILABLE_AVOSCloud
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 3.1.1.1.
+
+// AVOSCloudCrashReporting
+#define COCOAPODS_POD_AVAILABLE_AVOSCloudCrashReporting
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 3.1.1.1.
+
+// AVOSCloudIM
+#define COCOAPODS_POD_AVAILABLE_AVOSCloudIM
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 3.1.1.1.
+
+// AVOSCloudSNS
+#define COCOAPODS_POD_AVAILABLE_AVOSCloudSNS
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 3.1.1.1.
+
 // BlocksKit
 #define COCOAPODS_POD_AVAILABLE_BlocksKit
 #define COCOAPODS_VERSION_MAJOR_BlocksKit 2
@@ -69,8 +97,8 @@
 // MJExtension
 #define COCOAPODS_POD_AVAILABLE_MJExtension
 #define COCOAPODS_VERSION_MAJOR_MJExtension 2
-#define COCOAPODS_VERSION_MINOR_MJExtension 0
-#define COCOAPODS_VERSION_PATCH_MJExtension 2
+#define COCOAPODS_VERSION_MINOR_MJExtension 1
+#define COCOAPODS_VERSION_PATCH_MJExtension 0
 
 // MMMarkdown
 #define COCOAPODS_POD_AVAILABLE_MMMarkdown
