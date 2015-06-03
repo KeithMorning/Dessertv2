@@ -131,6 +131,12 @@
 		5351590E1AFC3A690045B509 /* DSSplitCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5351590D1AFC3A690045B509 /* DSSplitCaseViewController.m */; };
 		5370EA2A1AC8489300A1AC2B /* BlogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5370EA291AC8489300A1AC2B /* BlogDetailViewController.m */; };
 		5370EA311AC84AB100A1AC2B /* DSBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5370EA301AC84AB100A1AC2B /* DSBaseTableViewController.m */; };
+		538112541B1DFBDA00CCA9F2 /* LoginMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538112531B1DFBDA00CCA9F2 /* LoginMainViewController.m */; };
+		538112571B1DFC7300CCA9F2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538112561B1DFC7300CCA9F2 /* RegisterViewController.m */; };
+		5381125A1B1DFC8500CCA9F2 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538112591B1DFC8500CCA9F2 /* ResetPasswordViewController.m */; };
+		538112631B1E06D000CCA9F2 /* emailLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 538112621B1E06D000CCA9F2 /* emailLogin.png */; };
+		5381126B1B1E092800CCA9F2 /* email in Resources */ = {isa = PBXBuildFile; fileRef = 5381126A1B1E092800CCA9F2 /* email */; };
+		5381126D1B1E0A2700CCA9F2 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = 5381126C1B1E0A2700CCA9F2 /* password.png */; };
 		5381D4051AD8AC70004A4ADF /* BlogBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5381D4001AD8AC70004A4ADF /* BlogBaseTableViewCell.m */; };
 		5381D4061AD8AC70004A4ADF /* BlogBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5381D4011AD8AC70004A4ADF /* BlogBaseTableViewCell.xib */; };
 		5381D4071AD8AC70004A4ADF /* BlogDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5381D4031AD8AC70004A4ADF /* BlogDetailView.m */; };
@@ -143,6 +149,8 @@
 		53978C1E1ADA9CB7000982C8 /* userSkillHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53978C1D1ADA9CB7000982C8 /* userSkillHeaderView.xib */; };
 		53A35C6C1AE3397B00CDE69E /* UserCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A35C6B1AE3397B00CDE69E /* UserCaseViewController.m */; };
 		53A35C6F1AE33E5F00CDE69E /* DoctorActicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A35C6E1AE33E5F00CDE69E /* DoctorActicleViewController.m */; };
+		53E0E1A21B1CA7FC00F1313F /* LoginBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E1A11B1CA7FC00F1313F /* LoginBaseViewController.m */; };
+		53E0E1A51B1CAF3D00F1313F /* LoginCompeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E1A41B1CAF3D00F1313F /* LoginCompeleteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -378,6 +386,15 @@
 		5370EA291AC8489300A1AC2B /* BlogDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogDetailViewController.m; sourceTree = "<group>"; };
 		5370EA2F1AC84AB100A1AC2B /* DSBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSBaseTableViewController.h; sourceTree = "<group>"; };
 		5370EA301AC84AB100A1AC2B /* DSBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSBaseTableViewController.m; sourceTree = "<group>"; };
+		538112521B1DFBDA00CCA9F2 /* LoginMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginMainViewController.h; sourceTree = "<group>"; };
+		538112531B1DFBDA00CCA9F2 /* LoginMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginMainViewController.m; sourceTree = "<group>"; };
+		538112551B1DFC7300CCA9F2 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		538112561B1DFC7300CCA9F2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		538112581B1DFC8500CCA9F2 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		538112591B1DFC8500CCA9F2 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		538112621B1E06D000CCA9F2 /* emailLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emailLogin.png; sourceTree = "<group>"; };
+		5381126A1B1E092800CCA9F2 /* email */ = {isa = PBXFileReference; lastKnownFileType = file; path = email; sourceTree = "<group>"; };
+		5381126C1B1E0A2700CCA9F2 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
 		5381D3FF1AD8AC70004A4ADF /* BlogBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogBaseTableViewCell.h; path = Blog/BlogBaseTableViewCell.h; sourceTree = "<group>"; };
 		5381D4001AD8AC70004A4ADF /* BlogBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogBaseTableViewCell.m; path = Blog/BlogBaseTableViewCell.m; sourceTree = "<group>"; };
 		5381D4011AD8AC70004A4ADF /* BlogBaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BlogBaseTableViewCell.xib; path = Blog/BlogBaseTableViewCell.xib; sourceTree = "<group>"; };
@@ -397,6 +414,10 @@
 		53A35C6B1AE3397B00CDE69E /* UserCaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCaseViewController.m; sourceTree = "<group>"; };
 		53A35C6D1AE33E5F00CDE69E /* DoctorActicleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorActicleViewController.h; sourceTree = "<group>"; };
 		53A35C6E1AE33E5F00CDE69E /* DoctorActicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorActicleViewController.m; sourceTree = "<group>"; };
+		53E0E1A01B1CA7FC00F1313F /* LoginBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginBaseViewController.h; sourceTree = "<group>"; };
+		53E0E1A11B1CA7FC00F1313F /* LoginBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginBaseViewController.m; sourceTree = "<group>"; };
+		53E0E1A31B1CAF3D00F1313F /* LoginCompeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCompeleteViewController.h; sourceTree = "<group>"; };
+		53E0E1A41B1CAF3D00F1313F /* LoginCompeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCompeleteViewController.m; sourceTree = "<group>"; };
 		84D42DE750BD585EA5AE3BAF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ECF0BA536EDD6583E28E7727 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -614,6 +635,16 @@
 			children = (
 				5307EAF91AC6965D00441823 /* LoginViewController.h */,
 				5307EAFA1AC6965D00441823 /* LoginViewController.m */,
+				53E0E1A01B1CA7FC00F1313F /* LoginBaseViewController.h */,
+				53E0E1A11B1CA7FC00F1313F /* LoginBaseViewController.m */,
+				53E0E1A31B1CAF3D00F1313F /* LoginCompeleteViewController.h */,
+				53E0E1A41B1CAF3D00F1313F /* LoginCompeleteViewController.m */,
+				538112521B1DFBDA00CCA9F2 /* LoginMainViewController.h */,
+				538112531B1DFBDA00CCA9F2 /* LoginMainViewController.m */,
+				538112551B1DFC7300CCA9F2 /* RegisterViewController.h */,
+				538112561B1DFC7300CCA9F2 /* RegisterViewController.m */,
+				538112581B1DFC8500CCA9F2 /* ResetPasswordViewController.h */,
+				538112591B1DFC8500CCA9F2 /* ResetPasswordViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -637,6 +668,9 @@
 				5307EB041AC69D5D00441823 /* arrowDown.png */,
 				5307EB051AC69D5D00441823 /* arrowUp.png */,
 				535159011AF9935B0045B509 /* aticlelist.plist */,
+				5381126A1B1E092800CCA9F2 /* email */,
+				5381126C1B1E0A2700CCA9F2 /* password.png */,
+				538112621B1E06D000CCA9F2 /* emailLogin.png */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -1076,6 +1110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53279D0C1AD9598500593E17 /* userAticleTableViewCell.xib in Resources */,
+				538112631B1E06D000CCA9F2 /* emailLogin.png in Resources */,
 				533790B41B075927002824C0 /* chat_voice_record.png in Resources */,
 				53279D1D1AD9E55400593E17 /* DSSkillBox.xib in Resources */,
 				5307EB071AC69D5D00441823 /* arrowUp.png in Resources */,
@@ -1099,6 +1134,7 @@
 				533306F91ABDC0230054BA9E /* Images.xcassets in Resources */,
 				533790A91B075927002824C0 /* chat_animation1.png in Resources */,
 				5381D4081AD8AC70004A4ADF /* BlogDetailView.xib in Resources */,
+				5381126B1B1E092800CCA9F2 /* email in Resources */,
 				533790B11B075927002824C0 /* Chat_record_circle.png in Resources */,
 				533790B01B075927002824C0 /* chat_message_back.png in Resources */,
 				534DA7501B07A82D0093586E /* ChatViewController.xib in Resources */,
@@ -1108,6 +1144,7 @@
 				535159021AF9935B0045B509 /* aticlelist.plist in Resources */,
 				533790B71B075927002824C0 /* chatto_bg_normal.png in Resources */,
 				53978C1E1ADA9CB7000982C8 /* userSkillHeaderView.xib in Resources */,
+				5381126D1B1E0A2700CCA9F2 /* password.png in Resources */,
 				533790B91B075927002824C0 /* 1.jpeg in Resources */,
 				533790B61B075927002824C0 /* chatfrom_doctor_icon.png in Resources */,
 				5307EB061AC69D5D00441823 /* arrowDown.png in Resources */,
@@ -1185,6 +1222,7 @@
 				5307EAB71ABEBE7F00441823 /* AFURLConnectionOperation.m in Sources */,
 				53A35C6C1AE3397B00CDE69E /* UserCaseViewController.m in Sources */,
 				5307EABE1ABEBE7F00441823 /* UIButton+AFNetworking.m in Sources */,
+				538112571B1DFC7300CCA9F2 /* RegisterViewController.m in Sources */,
 				5307EB501AC700CC00441823 /* DSDissmisSegue.m in Sources */,
 				533976251AD42D4C002FAD85 /* LeftMenuViewController.m in Sources */,
 				5307EB361AC6D62D00441823 /* SDWebImageCompat.m in Sources */,
@@ -1203,6 +1241,7 @@
 				5307EB371AC6D62D00441823 /* SDWebImageDecoder.m in Sources */,
 				533790BD1B075927002824C0 /* UUInputFunctionView.m in Sources */,
 				5307EB3A1AC6D62D00441823 /* SDWebImageManager.m in Sources */,
+				5381125A1B1DFC8500CCA9F2 /* ResetPasswordViewController.m in Sources */,
 				533790C11B075927002824C0 /* UUMessageFrame.m in Sources */,
 				5307EAE01AC05DD400441823 /* MKToPainText.m in Sources */,
 				5307EABC1ABEBE7F00441823 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -1218,6 +1257,7 @@
 				5337907F1B075914002824C0 /* Mp3Recorder.m in Sources */,
 				5307EAC21ABEBE7F00441823 /* UIWebView+AFNetworking.m in Sources */,
 				533790D01B078D0E002824C0 /* LeanMessageManager.m in Sources */,
+				538112541B1DFBDA00CCA9F2 /* LoginMainViewController.m in Sources */,
 				53279D101AD959A700593E17 /* userSkillsTableViewCell.m in Sources */,
 				533790A81B075927002824C0 /* NSDate+Utils.m in Sources */,
 				5307EACB1ABECF2800441823 /* DSNetClient.m in Sources */,
@@ -1234,6 +1274,7 @@
 				5307EABD1ABEBE7F00441823 /* UIAlertView+AFNetworking.m in Sources */,
 				5307EB471AC6DD6500441823 /* YLGIFImage.m in Sources */,
 				5351590B1AF99E5F0045B509 /* DSPosterDAO.m in Sources */,
+				53E0E1A21B1CA7FC00F1313F /* LoginBaseViewController.m in Sources */,
 				533790BC1B075927002824C0 /* UUImageAvatarBrowser.m in Sources */,
 				533790781B075907002824C0 /* MJRefreshHeaderView.m in Sources */,
 				53279D061AD9075200593E17 /* userExpericeTableViewCell.m in Sources */,
@@ -1247,6 +1288,7 @@
 				53279CFA1AD8EDC400593E17 /* UIImageView+comm.m in Sources */,
 				5307EABB1ABEBE7F00441823 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				5307EABA1ABEBE7F00441823 /* AFURLSessionManager.m in Sources */,
+				53E0E1A51B1CAF3D00F1313F /* LoginCompeleteViewController.m in Sources */,
 				533306F11ABDC0230054BA9E /* AppDelegate.m in Sources */,
 				53279CFD1AD8F00100593E17 /* DSBaseViewController.m in Sources */,
 				53279D191AD9E53100593E17 /* DSSkillBox.m in Sources */,

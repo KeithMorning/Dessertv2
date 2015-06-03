@@ -17,6 +17,8 @@
     NSTimer *playTimer;
     
     UILabel *placeHold;
+    
+    UIButton *sender;
 }
 @end
 
@@ -189,8 +191,12 @@
     else{
         [self.TextViewInput resignFirstResponder];
         UIActionSheet *actionSheet= [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Camera",@"Images",nil];
-        [actionSheet showInView:self.window];
-        [actionSheet showFromRect:sender.frame inView:self.window animated:YES];
+        if(IS_ON_IPHONE){
+            [actionSheet showInView:self.window];
+        }
+        else{
+            [actionSheet showFromRect:sender.bounds inView:sender animated:YES];
+        }
     }
 }
 
@@ -224,8 +230,7 @@
 
 
 #pragma mark - Add Picture
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0) {
         [self addCarema];
     }else if (buttonIndex == 1){
@@ -253,8 +258,13 @@
         picker.delegate = self;
         picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        [self.superVC presentViewController:picker animated:YES completion:^{
-        }];
+        if(IS_ON_IPHONE){
+            [self.superVC presentViewController:picker animated:YES completion:^{
+            }];
+        }else{
+            UIPopoverController *popVc= [[UIPopoverController alloc]initWithContentViewController:picker];
+            [popVc presentPopoverFromRect:self.btnSendMessage.bounds inView:self.btnSendMessage permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        }
     }
 }
 
