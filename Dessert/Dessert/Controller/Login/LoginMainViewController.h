@@ -8,6 +8,6 @@
 
 #import "LoginBaseViewController.h"
 
-@interface LoginMainViewController : LoginBaseViewController
+@interface LoginMainViewController : LoginBaseViewController<UITextFieldDelegate,UITextInputTraits>
 
 @end

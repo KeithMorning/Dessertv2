@@ -12,7 +12,9 @@
 #import "LoginBaseViewController.h"
 
 @interface LoginBaseViewController ()
-
+{
+     BOOL isKeyBoardVisible;
+}
 @property (nonatomic,strong) UIImageView *circleImageView;
 @property (nonatomic,strong) UILabel *nameLable;
 @property (nonatomic,strong) UILabel *loadingLable;
@@ -36,7 +38,9 @@
         _loadingLable.textAlignment = NSTextAlignmentCenter;
         _loadingLable.frame = CGRectMake(kScreen_Width/2-40, kScreen_Height/2+kCircleDia/2+10, 80, 20);
 
-        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillDissapear:) name:UIKeyboardWillHideNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardFrameChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
         
     }
     return self;
@@ -54,6 +58,9 @@
     [self setNamelableAttibute];
     [self.view addSubview:_loadingLable];
     _loadingLable.alpha = 0;
+    
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closeKeyBoardByTap:)];
+    [self.view addGestureRecognizer:gesture];
    // self.isLoading = YES;
     // Do any additional setup after loading the view.
 }
@@ -178,6 +185,56 @@
 
 - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation{
     return UIStatusBarAnimationSlide;
+}
+
+#pragma mark - keyboard notification
+- (void)keyBoardWillShow:(NSNotification *)notification{
+    if (isKeyBoardVisible) {
+        return;
+    }
+    isKeyBoardVisible = YES;
+    NSDictionary *info = [notification userInfo];
+    
+    CGSize size = [self getKeyboardSizeFromDict:info];
+    CGRect frame = self.view.frame;
+    frame.origin.y = -1*size.height;
+    self.view.frame = frame;
+    
+}
+
+- (void)keyBoardWillDissapear:(NSNotification *)notification{
+    if (!isKeyBoardVisible) {
+        return;
+    }
+    isKeyBoardVisible = NO;
+    
+    CGRect frame = self.view.frame;
+    frame.origin.y = 0;
+    self.view.frame = frame;
+    
+}
+- (void)keyBoardFrameChange:(NSNotification *)notification{
+    NSDictionary *info = [notification userInfo];
+    
+    CGSize size = [self getKeyboardSizeFromDict:info];
+    CGRect frame = self.view.frame;
+    frame.origin.y = -1*size.height;
+    NSTimeInterval boardAnimationDuration=[[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [UIView animateWithDuration:boardAnimationDuration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.view.frame = frame;
+    } completion:nil];
+    
+}
+- (CGSize)getKeyboardSizeFromDict:(NSDictionary *)dict{
+    NSValue *aValue = [dict objectForKey:UIKeyboardFrameEndUserInfoKey];
+    return [aValue CGRectValue].size;
+}
+
+#pragma mark - dealloc
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 @end
