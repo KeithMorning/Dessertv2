@@ -7,11 +7,14 @@
 //
 
 #import "LoginMainViewController.h"
-#import <AVOSCloud/AVOSCloud.h>
+#import "DSAVUser.h"
+#import "LoginCompeleteViewController.h"
 
 @interface LoginMainViewController ()
 {
-   
+    NSString *email;
+    NSString *userName;
+    NSString *password;
     UITextField *currentTextField;
 }
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -22,7 +25,7 @@
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super initWithCoder:aDecoder]) {
-
+        self.needToCloseKeyboard = YES;
     }
     return self;
 }
@@ -68,17 +71,45 @@
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     currentTextField = nil;
 }
-#pragma mark - closeKeyboard
--(void)closeKeyBoardByTap:(UIGestureRecognizer *)sender{
-    [self.view endEditing:YES];
-}
+
 
 #pragma mark - login
 - (IBAction)loginClick:(id)sender {
-    NSString *email = self.emailTextField.text;
-    NSString *password = self.passWordField.text;
+    [self.view endEditing:YES];
+    if ([self checkStringFormat]) {
+         [self performSegueWithIdentifier:@"DSLogincompleteIdentifie" sender:sender];
+    }
     
 }
+- (IBAction)resetPassWordClick:(id)sender {
+    [self.view endEditing:YES];
+    [self performSegueWithIdentifier:@"DSResetPasswordIdentifier" sender:sender];
+}
+- (IBAction)registerClick:(id)sender {
+    [self.view endEditing:YES];
+    [self performSegueWithIdentifier:@"DSRegisterIdentifier" sender:sender];
+}
 
+#pragma makr - checkstring
+- (BOOL)checkStringFormat{
+    userName = self.emailTextField.text;
+    password = self.passWordField.text;
+    //TODO: check the email and password
+    return YES;
+}
+
+#pragma mark - config the complete view
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"DSLogincompleteIdentifie"]) {
+        LoginCompeleteViewController *loginCompeleteVc = segue.destinationViewController;
+        loginCompeleteVc.userName = userName;
+        loginCompeleteVc.passWord = password;
+        loginCompeleteVc.loadingType = DSLoadTypeLogin;
+        __weak LoginCompeleteViewController *weakVc = loginCompeleteVc;
+        [loginCompeleteVc setFailedLoginBlock:^{
+            [weakVc.navigationController popViewControllerAnimated:NO];
+        }];
+    }
+}
 
 @end

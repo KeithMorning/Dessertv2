@@ -73,6 +73,9 @@
 		53279D191AD9E53100593E17 /* DSSkillBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 53279D181AD9E53100593E17 /* DSSkillBox.m */; };
 		53279D1D1AD9E55400593E17 /* DSSkillBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53279D1C1AD9E55400593E17 /* DSSkillBox.xib */; };
 		532C4BEE1B232A5400C67A55 /* people.png in Resources */ = {isa = PBXBuildFile; fileRef = 532C4BED1B232A5400C67A55 /* people.png */; };
+		532C4BF11B23435F00C67A55 /* DSNoAnimationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 532C4BF01B23435F00C67A55 /* DSNoAnimationSegue.m */; };
+		532C4BF51B23471100C67A55 /* DSAVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 532C4BF41B23471100C67A55 /* DSAVUser.m */; };
+		532C4BF81B23506100C67A55 /* DSHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 532C4BF71B23506100C67A55 /* DSHud.m */; };
 		533306EE1ABDC0230054BA9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 533306ED1ABDC0230054BA9E /* main.m */; };
 		533306F11ABDC0230054BA9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 533306F01ABDC0230054BA9E /* AppDelegate.m */; };
 		533306F71ABDC0230054BA9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533306F51ABDC0230054BA9E /* Main.storyboard */; };
@@ -292,6 +295,12 @@
 		53279D181AD9E53100593E17 /* DSSkillBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSkillBox.m; sourceTree = "<group>"; };
 		53279D1C1AD9E55400593E17 /* DSSkillBox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSkillBox.xib; sourceTree = "<group>"; };
 		532C4BED1B232A5400C67A55 /* people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = people.png; sourceTree = "<group>"; };
+		532C4BEF1B23435F00C67A55 /* DSNoAnimationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNoAnimationSegue.h; sourceTree = "<group>"; };
+		532C4BF01B23435F00C67A55 /* DSNoAnimationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNoAnimationSegue.m; sourceTree = "<group>"; };
+		532C4BF31B23471100C67A55 /* DSAVUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAVUser.h; sourceTree = "<group>"; };
+		532C4BF41B23471100C67A55 /* DSAVUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAVUser.m; sourceTree = "<group>"; };
+		532C4BF61B23506100C67A55 /* DSHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHud.h; sourceTree = "<group>"; };
+		532C4BF71B23506100C67A55 /* DSHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSHud.m; sourceTree = "<group>"; };
 		533306E81ABDC0230054BA9E /* Dessert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dessert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		533306EC1ABDC0230054BA9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		533306ED1ABDC0230054BA9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -544,6 +553,7 @@
 		5307EAC51ABECE9300441823 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				532C4BF21B2346F900C67A55 /* AVCloudModel */,
 				533790D41B078DAD002824C0 /* ChatModel.h */,
 				533790D51B078DAD002824C0 /* ChatModel.m */,
 				5307EAE11AC06AAA00441823 /* DSContent.h */,
@@ -581,6 +591,8 @@
 				5307EAD51ABEFC8400441823 /* HtmlPasers */,
 				53051C981ACAE8B30055BC05 /* DSTextCGSize.h */,
 				53051C991ACAE8B30055BC05 /* DSTextCGSize.m */,
+				532C4BF61B23506100C67A55 /* DSHud.h */,
+				532C4BF71B23506100C67A55 /* DSHud.m */,
 			);
 			path = Unitily;
 			sourceTree = "<group>";
@@ -647,6 +659,8 @@
 				538112561B1DFC7300CCA9F2 /* RegisterViewController.m */,
 				538112581B1DFC8500CCA9F2 /* ResetPasswordViewController.h */,
 				538112591B1DFC8500CCA9F2 /* ResetPasswordViewController.m */,
+				532C4BEF1B23435F00C67A55 /* DSNoAnimationSegue.h */,
+				532C4BF01B23435F00C67A55 /* DSNoAnimationSegue.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -750,6 +764,15 @@
 				53279D011AD8F0D400593E17 /* DSUserSettingViewController.m */,
 			);
 			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		532C4BF21B2346F900C67A55 /* AVCloudModel */ = {
+			isa = PBXGroup;
+			children = (
+				532C4BF31B23471100C67A55 /* DSAVUser.h */,
+				532C4BF41B23471100C67A55 /* DSAVUser.m */,
+			);
+			path = AVCloudModel;
 			sourceTree = "<group>";
 		};
 		533306DF1ABDC0230054BA9E = {
@@ -1204,6 +1227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				532C4BF11B23435F00C67A55 /* DSNoAnimationSegue.m in Sources */,
 				535159001AF992F50045B509 /* DSFileManager.m in Sources */,
 				5307EAEB1AC47A0E00441823 /* ModelHeader.h in Sources */,
 				5307EADC1ABF07A100441823 /* NSMutableString+Common.m in Sources */,
@@ -1228,6 +1252,7 @@
 				5307EABE1ABEBE7F00441823 /* UIButton+AFNetworking.m in Sources */,
 				538112571B1DFC7300CCA9F2 /* RegisterViewController.m in Sources */,
 				5307EB501AC700CC00441823 /* DSDissmisSegue.m in Sources */,
+				532C4BF81B23506100C67A55 /* DSHud.m in Sources */,
 				533976251AD42D4C002FAD85 /* LeftMenuViewController.m in Sources */,
 				5307EB361AC6D62D00441823 /* SDWebImageCompat.m in Sources */,
 				5381D4071AD8AC70004A4ADF /* BlogDetailView.m in Sources */,
@@ -1295,6 +1320,7 @@
 				53E0E1A51B1CAF3D00F1313F /* LoginCompeleteViewController.m in Sources */,
 				533306F11ABDC0230054BA9E /* AppDelegate.m in Sources */,
 				53279CFD1AD8F00100593E17 /* DSBaseViewController.m in Sources */,
+				532C4BF51B23471100C67A55 /* DSAVUser.m in Sources */,
 				53279D191AD9E53100593E17 /* DSSkillBox.m in Sources */,
 				533790BB1B075927002824C0 /* UUAVAudioPlayer.m in Sources */,
 				5370EA2A1AC8489300A1AC2B /* BlogDetailViewController.m in Sources */,

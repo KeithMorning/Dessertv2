@@ -23,6 +23,8 @@
     #import "UIColor+CreateMethods.h"
     #import "UIImageView+comm.h"
     #import "ACMacros.h"
+    #import "DSHud.h"
+
 #endif
 
 ///THe notification center name

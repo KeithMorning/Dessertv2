@@ -17,7 +17,9 @@ typedef void(^loginprocess)();
 
 @interface LoginBaseViewController : UIViewController
 
-@property (nonatomic) BOOL isLoading;
+@property (nonatomic) BOOL needToCloseKeyboard;
+
+@property (nonatomic) BOOL isLoading;// need to be set in viewdidAppear
 @property (nonatomic,copy) loginprocess successLoginBlock;
 @property (nonatomic,copy) loginprocess failedLoginBlock;
 

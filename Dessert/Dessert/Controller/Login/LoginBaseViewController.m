@@ -42,6 +42,8 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillDissapear:) name:UIKeyboardWillHideNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardFrameChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
         
+        _needToCloseKeyboard = NO;
+        
     }
     return self;
 }
@@ -65,10 +67,19 @@
     // Do any additional setup after loading the view.
 }
 
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-   // self.isLoading = YES;
-   // [self performSelector:@selector(test) withObject:nil afterDelay:5];
+    //self.isLoading = YES;
+    //[self performSelector:@selector(test) withObject:nil afterDelay:5];
+}
+
+#pragma mark - closeKeyboard
+-(void)closeKeyBoardByTap:(UIGestureRecognizer *)sender{
+    if (self.needToCloseKeyboard) {
+        [self.view endEditing:YES];
+    }
+    
 }
 
 - (void)test{
@@ -104,7 +115,7 @@
             [self roate];
         }
     }else{
-        _circleY.constant = -kScreen_Height/4;
+        _circleY.constant = kCircleCenterY;
         
         [self.view setNeedsUpdateConstraints];
         [UIView animateWithDuration:1 animations:^{
