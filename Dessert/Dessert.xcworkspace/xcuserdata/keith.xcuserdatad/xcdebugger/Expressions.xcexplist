@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[DSTestVC saveAvo:]:DSTestVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "DSAVUser currentUser">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[AMSlideMenuLeftMenuSegue perform]:AMSlideMenuLeftMenuSegue.m">
          <PersistentStrings>
             <PersistentString

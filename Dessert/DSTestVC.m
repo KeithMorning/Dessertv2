@@ -15,6 +15,7 @@
 #import  <FontAwesome+iOS/NSString+FontAwesome.h>
 #import "DSPosterDAO.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import "DSAVUser.h"
 @interface DSTestVC()
 @property (weak, nonatomic) IBOutlet UILabel *LableTS;
 @property (weak, nonatomic) IBOutlet UILabel *LableForAVO;
@@ -23,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
 @property (weak, nonatomic) IBOutlet UITextField *code;
 @property (nonatomic,strong) AVObject *avObject;
+@property (nonatomic,strong) NSArray *conment;
+
 @property (nonatomic,strong) AVUser *user;
 @end
 @implementation DSTestVC
@@ -58,8 +61,44 @@
 - (IBAction)saveAvo:(id)sender {
     
     [self.avObject setObject:@"this is a good night" forKey:@"Content"];
+    [self.avObject setObject:[DSAVUser currentUser] forKey:@"BlogOwner"];
+    AVObject *comment0 = [[AVObject alloc]initWithClassName:@"conment"];
+    [comment0 setObject:@"keith1" forKey:@"user"];
+    AVObject *comment1 = [[AVObject alloc]initWithClassName:@"conment"];
+    [comment1 setObject:@"keith2" forKey:@"user"];
+    //NSArray *comments = [[NSArray alloc]initWithObjects:comment0,comment1, nil];
+    //[self.avObject addObjectsFromArray:comments forKey:@"comment"];
+    [comment0 setObject:self.avObject forKey:@"parent"];
+    [comment1 setObject:self.avObject forKey:@"parent"];
+    [comment0 saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [comment1 saveEventually];
+        
+    }];
+    
+    NSNumber *number = [NSNumber numberWithInt:42];
+    NSString *string = [NSString stringWithFormat:@"the number is %@", number];
+    NSDate *date = [NSDate date];
+    NSData *data = [@"foo" dataUsingEncoding:NSUTF8StringEncoding];
+    NSArray *array = [NSArray arrayWithObjects:string, number, nil];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:number, @"number",
+                                string, @"string",
+                                nil];
+    
+    AVObject *bigObject = [AVObject objectWithClassName:@"BigObject"];
+    [bigObject setObject:number     forKey:@"myNumber"];
+    [bigObject setObject:string     forKey:@"myString"];
+    [bigObject setObject:date       forKey:@"myDate"];
+    [bigObject setObject:data       forKey:@"myData"];
+    [bigObject setObject:array      forKey:@"myArray"];
+    [bigObject setObject:dictionary forKey:@"myDictionary"];
+    [bigObject saveInBackground];
+    
+    /*
     [self.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
+            
+            
+            
             dispatch_async(dispatch_get_main_queue(), ^{
                 UIAlertController *alter = [UIAlertController alertControllerWithTitle:@"success" message:@"save success" preferredStyle:UIAlertControllerStyleAlert];
                 [alter addAction:[UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil]];
@@ -67,7 +106,10 @@
             });
 
         }
-    }];
+    }];*/
+    
+    
+    
 }
 - (IBAction)DeleteAVO:(id)sender {
     [self.avObject deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

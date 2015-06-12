@@ -61,8 +61,8 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (succeeded) {
-                [DSHud showMessage:@"注册成功" withView:self.view dealyHide:1.0];
-                [self performSegueWithIdentifier:@"DSMainMenuIdentifier" sender:nil];
+                [DSHud showMessage:@"注册成功" withView:self.view dealyHide:1.5];
+                [self performSelector:@selector(delayLogin) withObject:nil afterDelay:2.0];
             }
             else{
                 if (self.failedLoginBlock) {
@@ -88,11 +88,15 @@
     }];
 }
 
+- (void)delayLogin{
+
+    [self performSegueWithIdentifier:@"DSMainMenuIdentifier" sender:nil];
+}
+
 
 - (void)delayUnloading{
     self.isLoading = NO;
 }
-
 
 
 /*
