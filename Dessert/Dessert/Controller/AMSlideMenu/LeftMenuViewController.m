@@ -9,6 +9,9 @@
 #import "LeftMenuViewController.h"
 #import "DSAVUser.h"
 #import "AMleftMenuHeader.h"
+#import "AMLeftMenuTableViewCell.h"
+
+#define cellHeight 60
 
 @interface LeftMenuViewController ()
 @property (strong, nonatomic) UITableView *myTableView;
@@ -29,6 +32,8 @@
 //    }
    // [self setFixedStatusBar];
     [self setTableViewHeader];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,6 +57,8 @@
 - (void)setTableViewHeader{
     
     AMleftMenuHeader *header = [[AMleftMenuHeader alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 135)];
+    DSAVUser *user = [DSAVUser currentUser];
+    header.userName = user.username;
     self.tableView.tableHeaderView = header;
     self.view.backgroundColor = header.backgroundColor;
 }
@@ -63,5 +70,59 @@
 //        [self.navigationController popToRootViewControllerAnimated:YES];
 //    }
 //}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 4;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    AMLeftMenuTableViewCell *cell = (AMLeftMenuTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"leftMenuCell"];
+    cell.backgroundColor = [UIColor colorWithHex:kDefaultBackgroundColor alpha:1.0];
+    [self setLeftMenu:indexPath.row cell:cell];
+    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.bounds];
+    cell.selectedBackgroundView.backgroundColor = [UIColor colorWithHex:kDefaultSelectedColor alpha:1.0];
+    if (indexPath.row ==0) {
+        [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+    }
+    return cell;
+}
+
+- (void)setLeftMenu:(NSInteger)indexRow cell:(AMLeftMenuTableViewCell *)cell{
+    switch (indexRow) {
+        case 0:
+            cell.leftTitle = @"社区";
+            cell.leftImage = [UIImage imageNamed:@"community"];
+            break;
+        case 1:
+            cell.leftTitle = @"关注";
+            cell.leftImage = [UIImage imageNamed:@"following"];
+            break;
+        case 2:
+            cell.leftTitle = @"消息";
+            cell.leftImage = [UIImage imageNamed:@"message"];
+            break;
+        case 3:
+            cell.leftTitle = @"退出";
+            cell.leftImage = [UIImage imageNamed:@"logout"];
+            break;
+        default:
+            break;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row<3) {
+        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    }else{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+}
 
 @end

@@ -158,6 +158,7 @@
 		53A35C6F1AE33E5F00CDE69E /* DoctorActicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A35C6E1AE33E5F00CDE69E /* DoctorActicleViewController.m */; };
 		53E0E1A21B1CA7FC00F1313F /* LoginBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E1A11B1CA7FC00F1313F /* LoginBaseViewController.m */; };
 		53E0E1A51B1CAF3D00F1313F /* LoginCompeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E1A41B1CAF3D00F1313F /* LoginCompeleteViewController.m */; };
+		53F16BB11B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F16BB01B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -437,6 +438,8 @@
 		53E0E1A11B1CA7FC00F1313F /* LoginBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginBaseViewController.m; sourceTree = "<group>"; };
 		53E0E1A31B1CAF3D00F1313F /* LoginCompeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCompeleteViewController.h; sourceTree = "<group>"; };
 		53E0E1A41B1CAF3D00F1313F /* LoginCompeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCompeleteViewController.m; sourceTree = "<group>"; };
+		53F16BAF1B2C84D5007E61A3 /* AMLeftMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMLeftMenuTableViewCell.h; sourceTree = "<group>"; };
+		53F16BB01B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMLeftMenuTableViewCell.m; sourceTree = "<group>"; };
 		84D42DE750BD585EA5AE3BAF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ECF0BA536EDD6583E28E7727 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -972,6 +975,8 @@
 				532E0E361B2893F8004C7348 /* AMleftMenuHeader.h */,
 				532E0E371B2893F8004C7348 /* AMleftMenuHeader.m */,
 				532E0E391B289416004C7348 /* AMleftMenuHeader.xib */,
+				53F16BAF1B2C84D5007E61A3 /* AMLeftMenuTableViewCell.h */,
+				53F16BB01B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m */,
 			);
 			path = AMSlideMenu;
 			sourceTree = "<group>";
@@ -1290,6 +1295,7 @@
 				5307EAE01AC05DD400441823 /* MKToPainText.m in Sources */,
 				5307EABC1ABEBE7F00441823 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				5307EAB61ABEBE7F00441823 /* AFSecurityPolicy.m in Sources */,
+				53F16BB11B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m in Sources */,
 				53279D021AD8F0D400593E17 /* DSUserSettingViewController.m in Sources */,
 				533790BF1B075927002824C0 /* UUMessageCell.m in Sources */,
 				5307EAC11ABEBE7F00441823 /* UIRefreshControl+AFNetworking.m in Sources */,

@@ -36,9 +36,6 @@
         case 2:
             identifier = @"UserCase";
             break;
-        case 3:
-            identifier = @"popRootVC";
-            break;
     }
     return identifier;
 }

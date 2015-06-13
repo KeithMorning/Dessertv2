@@ -42,3 +42,5 @@
 
 #define kApplicationId @"vcz6bokrijbxn9n3ban45meyf2x0dfqgwcx0b7tk8ia02wf6"
 #define kClientKey @"mqvr5w942idu0hox64xo96zmbiiaa26i89dp1dvwrpw4btq7"
+#define kDefaultBackgroundColor @"#373447"
+#define kDefaultSelectedColor @"#312E3F"
