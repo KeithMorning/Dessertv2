@@ -16,6 +16,10 @@
 #import "DSPosterDAO.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "DSAVUser.h"
+
+#import "DSFollowee.h"
+#import "DSFollower.h"
+
 @interface DSTestVC()
 @property (weak, nonatomic) IBOutlet UILabel *LableTS;
 @property (weak, nonatomic) IBOutlet UILabel *LableForAVO;
@@ -25,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *code;
 @property (nonatomic,strong) AVObject *avObject;
 @property (nonatomic,strong) NSArray *conment;
+@property (weak, nonatomic) IBOutlet UITextField *followUserTextField;
 
 @property (nonatomic,strong) AVUser *user;
 @end
@@ -147,4 +152,44 @@
     NSError *error;
     [user signUp:&error];
 }
+
+#pragma mark -
+#pragma mark - follower and followee
+- (void)getuserByName:(NSString *)name complete:(void(^)(DSAVUser *user))block{
+    AVQuery *query = [AVQuery queryWithClassName:@"_Users"];
+    [query whereKey:@"username" equalTo:name];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        block(objects[0]);
+    }];
+    
+}
+- (IBAction)followclick:(id)sender {
+    NSLog(@"%@",[self phonetic:@"keithMorning"]);
+//    WEAKSELF
+//    [self getuserByName:self.followUserTextField.text complete:^(DSAVUser *user) {
+//        [weakSelf addfollwee:user];
+//    }];
+}
+
+- (void)addfollwee:(DSAVUser *)user{
+    NSLog(@"%@",[self phonetic:@"赵永琴"]);
+    DSFollowee *follee = [[DSFollowee alloc] init];
+    follee.user = [DSAVUser currentUser];
+    follee.followee = user;
+    [follee saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"success save follee");
+        }else{
+            NSLog(@"%@",error.localizedDescription);
+        }
+    }];
+    
+}
+- (NSString *) phonetic:(NSString*)sourceString {
+    NSMutableString *source = [sourceString mutableCopy];
+    CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformMandarinLatin, NO);
+    CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformStripDiacritics, NO);
+    return source;
+}
+
 @end

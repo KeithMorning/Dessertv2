@@ -18,5 +18,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "-[DSTestVC addfollwee:]:DSTestVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "follee.user">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

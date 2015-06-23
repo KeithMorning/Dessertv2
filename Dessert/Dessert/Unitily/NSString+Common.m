@@ -36,4 +36,13 @@
     stringsize=CGSizeMake(MIN(size.width,ceilf(stringsize.width)), MIN(size.height, ceilf(stringsize.height)));//ceif 返回大于或等于该输入值的最小整数
     return stringsize;
 }
+
+//汉字转拼音
+- (NSString *)chineseWordToPinyin:(NSString *)name{
+    NSMutableString *source = [name mutableCopy];
+    CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformMandarinLatin, NO);
+    CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformStripDiacritics, NO);
+    return source;
+}
+
 @end

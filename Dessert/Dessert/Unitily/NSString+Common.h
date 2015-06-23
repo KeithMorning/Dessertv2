@@ -11,4 +11,7 @@
 @interface NSString (Common)
 - (NSRange)rangeByTrimmingRightCharactersInSet:(NSCharacterSet *)characterSet;
 -(CGSize)getCGSizeWithFont:(UIFont*)font constrainedSize:(CGSize)size;
+
+- (NSString *)chineseWordToPinyin:(NSString *)name;
 @end
+

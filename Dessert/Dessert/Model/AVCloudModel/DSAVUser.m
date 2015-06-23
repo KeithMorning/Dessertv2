@@ -14,4 +14,8 @@
     return [super user];
 }
 
++(NSString *)parseClassName{
+    return @"DSAVUser";
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <AVOSCloud/AVOSCloud.h>
+#import <AVObject+Subclass.h>
 
-@interface DSAVUser : AVUser
+@interface DSAVUser : AVUser<AVSubclassing>
 @end
