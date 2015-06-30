@@ -1,0 +1,108 @@
+
+/* Class = "UIButton"; normalTitle = "LoginMain"; ObjectID = "09c-NA-5H2"; */
+"09c-NA-5H2.normalTitle" = "LoginMain";
+
+/* Class = "UIButton"; normalTitle = "query"; ObjectID = "6We-4n-qub"; */
+"6We-4n-qub.normalTitle" = "query";
+
+/* Class = "UIButton"; normalTitle = "search"; ObjectID = "7c1-4w-CNF"; */
+"7c1-4w-CNF.normalTitle" = "search";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "Bbk-K9-yA4"; */
+"Bbk-K9-yA4.placeholder" = "password";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "DCn-G9-ifU"; */
+"DCn-G9-ifU.normalTitle" = "Delete";
+
+/* Class = "UIButton"; normalTitle = "testforModel"; ObjectID = "Dzk-Rz-r2j"; */
+"Dzk-Rz-r2j.normalTitle" = "testforModel";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "EWL-MW-wrY"; */
+"EWL-MW-wrY.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "返回"; ObjectID = "Efk-qO-55o"; */
+"Efk-qO-55o.normalTitle" = "返回";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "Hnh-Wp-k8w"; */
+"Hnh-Wp-k8w.placeholder" = "密码";
+
+/* Class = "UITextField"; placeholder = "邮箱"; ObjectID = "JeI-ib-gEr"; */
+"JeI-ib-gEr.placeholder" = "邮箱";
+
+/* Class = "UITextField"; placeholder = "邮箱"; ObjectID = "JwY-Kz-fGW"; */
+"JwY-Kz-fGW.placeholder" = "邮箱";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "KjR-nK-TCy"; */
+"KjR-nK-TCy.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Test"; ObjectID = "Lef-BU-4zx"; */
+"Lef-BU-4zx.normalTitle" = "Test";
+
+/* Class = "UIButton"; normalTitle = "SaveAVO"; ObjectID = "NJo-3a-cbs"; */
+"NJo-3a-cbs.normalTitle" = "SaveAVO";
+
+/* Class = "UIButton"; normalTitle = "创建"; ObjectID = "Oxj-1c-NXc"; */
+"Oxj-1c-NXc.normalTitle" = "创建";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "RsU-by-TwX"; */
+"RsU-by-TwX.normalTitle" = "Login";
+
+/* Class = "UITextField"; placeholder = "code"; ObjectID = "Ryh-se-QIz"; */
+"Ryh-se-QIz.placeholder" = "code";
+
+/* Class = "UIButton"; normalTitle = "exit"; ObjectID = "V0j-Ah-DS7"; */
+"V0j-Ah-DS7.normalTitle" = "exit";
+
+/* Class = "UIButton"; normalTitle = "已有账号去登录"; ObjectID = "VVE-BH-HhZ"; */
+"VVE-BH-HhZ.normalTitle" = "已有账号去登录";
+
+/* Class = "UITextField"; placeholder = "followUser"; ObjectID = "XMG-K3-wdV"; */
+"XMG-K3-wdV.placeholder" = "followUser";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "XqN-QO-Opy"; */
+"XqN-QO-Opy.normalTitle" = "Update";
+
+/* Class = "UIButton"; normalTitle = "发送"; ObjectID = "bx5-yA-LCw"; */
+"bx5-yA-LCw.normalTitle" = "发送";
+
+/* Class = "UITextField"; placeholder = "name"; ObjectID = "dFi-ps-XW3"; */
+"dFi-ps-XW3.placeholder" = "name";
+
+/* Class = "UIButton"; normalTitle = "Follow"; ObjectID = "diB-Aj-Sqx"; */
+"diB-Aj-Sqx.normalTitle" = "Follow";
+
+/* Class = "UILabel"; text = "社区"; ObjectID = "eNw-fK-VL8"; */
+"eNw-fK-VL8.text" = "社区";
+
+/* Class = "UIButton"; normalTitle = "Get"; ObjectID = "geF-2I-k9B"; */
+"geF-2I-k9B.normalTitle" = "Get";
+
+/* Class = "UINavigationItem"; title = "Dessert"; ObjectID = "gmg-rf-st8"; */
+"gmg-rf-st8.title" = "Dessert";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "jXU-eX-hX4"; */
+"jXU-eX-hX4.normalTitle" = "登录";
+
+/* Class = "UIButton"; normalTitle = "register"; ObjectID = "koC-00-lqS"; */
+"koC-00-lqS.normalTitle" = "register";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "mQc-l5-EOB"; */
+"mQc-l5-EOB.placeholder" = "密码";
+
+/* Class = "UIButton"; normalTitle = "忘记密码？"; ObjectID = "ndf-qI-EA4"; */
+"ndf-qI-EA4.normalTitle" = "忘记密码？";
+
+/* Class = "UINavigationItem"; title = "个人信息"; ObjectID = "p7c-jm-cwY"; */
+"p7c-jm-cwY.title" = "个人信息";
+
+/* Class = "UIButton"; normalTitle = "没有账户，创建一个吧"; ObjectID = "pVA-wK-pmG"; */
+"pVA-wK-pmG.normalTitle" = "没有账户，创建一个吧";
+
+/* Class = "UITextField"; placeholder = "邮箱"; ObjectID = "pjr-wU-dDe"; */
+"pjr-wU-dDe.placeholder" = "邮箱";
+
+/* Class = "UITextField"; placeholder = "用户名"; ObjectID = "rZh-wM-raO"; */
+"rZh-wM-raO.placeholder" = "用户名";
+
+/* Class = "UIButton"; normalTitle = "login"; ObjectID = "ta6-ww-2c6"; */
+"ta6-ww-2c6.normalTitle" = "login";

@@ -12,7 +12,14 @@
 - (void)doCircleFrame{
     self.layer.masksToBounds=YES;
     self.layer.cornerRadius=self.frame.size.width/2;
-    self.layer.borderWidth=1;
+    
+}
+
+- (void)doCircleFrameWithBorder{
+    [self doCircleFrameWithBorder];
+     self.layer.borderWidth =1.0;
     self.layer.borderColor=[UIColor colorWithHex:@"#ffffff" alpha:1.0].CGColor;
 }
+
+
 @end

@@ -10,4 +10,6 @@
 #import <AVObject+Subclass.h>
 
 @interface DSAVUser : AVUser<AVSubclassing>
+@property (nonatomic,strong) AVFile *userImage;
+@property (nonatomic,strong) NSString *pinyinName;
 @end

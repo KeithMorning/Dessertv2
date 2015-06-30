@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DSAVUser.h"
 
 @interface DSContactTableViewCell : UITableViewCell
-
+- (void)configCellWithUser:(DSAVUser*)user;
 @end

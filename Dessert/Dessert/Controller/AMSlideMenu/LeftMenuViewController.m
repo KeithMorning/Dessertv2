@@ -10,6 +10,7 @@
 #import "DSAVUser.h"
 #import "AMleftMenuHeader.h"
 #import "AMLeftMenuTableViewCell.h"
+#import "UIImageView+WebCache.h"
 
 #define cellHeight 60
 
@@ -59,6 +60,8 @@
     AMleftMenuHeader *header = [[AMleftMenuHeader alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 135)];
     DSAVUser *user = [DSAVUser currentUser];
     header.userName = user.username;
+    NSURL *imageUrl = [NSURL URLWithString:user.userImage.url];
+    [header.UserImageView sd_setImageWithURL:imageUrl placeholderImage:kUserImagePlaceholder];
     self.tableView.tableHeaderView = header;
     self.view.backgroundColor = header.backgroundColor;
 }
@@ -123,6 +126,11 @@
     }else{
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
+}
+
+#pragma mark - staus bar color
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

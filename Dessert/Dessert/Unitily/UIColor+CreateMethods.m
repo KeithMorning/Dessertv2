@@ -38,4 +38,8 @@
     return [UIColor colorWith8BitRed:redInt green:greenInt blue:blueInt alpha:alpha];
 }
 
++ (UIColor*)colorWithHex:(NSString *)hex{
+   return  [self colorWithHex:hex alpha:1.0];
+}
+
 @end

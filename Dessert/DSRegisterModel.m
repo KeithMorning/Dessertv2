@@ -12,6 +12,7 @@
 
 + (void)registerModel{
     [DSFollowee registerSubclass];
+    [DSAVUser registerSubclass];
 }
 
 @end

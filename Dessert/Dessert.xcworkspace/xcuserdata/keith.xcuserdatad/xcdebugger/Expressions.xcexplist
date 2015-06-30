@@ -3,10 +3,46 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[DSContactListTableViewController configNavigationBar]:DSContactListTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController.navigationItem">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__27-[DSTestVC searchFollowee:]_block_invoke:DSTestVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[DSContactListTableViewController refreshUserList]:DSContactListTableViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__51-[DSContactListTableViewController refreshUserList]_block_invoke:DSContactListTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "objects[0].user">
+            </PersistentString>
+            <PersistentString
+               value = "[user objectForKey:@&quot;followee&quot;] ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__24-[DSTestVC followclick:]_block_invoke:DSTestVC.m">
+      </ContextState>
+      <ContextState
          contextName = "-[DSTestVC saveAvo:]:DSTestVC.m">
          <PersistentStrings>
             <PersistentString
                value = "DSAVUser currentUser">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DSContactTableViewCell configCellWithUser:]:DSContactTableViewCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "user.userImage">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

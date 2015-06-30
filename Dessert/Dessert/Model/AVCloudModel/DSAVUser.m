@@ -9,13 +9,13 @@
 #import "DSAVUser.h"
 
 @implementation DSAVUser
-
+@dynamic userImage,pinyinName;
 +(instancetype)user{
     return [super user];
 }
 
 +(NSString *)parseClassName{
-    return @"DSAVUser";
+    return @"_User";
 }
 
 @end

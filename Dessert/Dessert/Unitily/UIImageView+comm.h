@@ -10,4 +10,6 @@
 
 @interface UIImageView (comm)
 - (void)doCircleFrame;
+- (void)doCircleFrameWithBorder;
+
 @end

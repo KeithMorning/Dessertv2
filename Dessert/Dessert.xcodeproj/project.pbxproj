@@ -171,6 +171,12 @@
 		53990C811B39A09B004FF0B2 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53990C7F1B39A09B004FF0B2 /* ChatViewController.xib */; };
 		53990C871B39A173004FF0B2 /* DSContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990C861B39A173004FF0B2 /* DSContactListTableViewController.m */; };
 		53990C8B1B39B245004FF0B2 /* DSContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990C8A1B39B245004FF0B2 /* DSContactTableViewCell.m */; };
+		53990CC41B40349B004FF0B2 /* DSRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990CC31B40349B004FF0B2 /* DSRootNavigationController.m */; };
+		53990CC71B404082004FF0B2 /* UIImage+comm.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990CC61B404082004FF0B2 /* UIImage+comm.m */; };
+		53990CCC1B404FE3004FF0B2 /* UISearchBar+common.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990CCB1B404FE3004FF0B2 /* UISearchBar+common.m */; };
+		53990CCF1B40510E004FF0B2 /* UIView+common.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990CCE1B40510E004FF0B2 /* UIView+common.m */; };
+		53990CD21B418AF3004FF0B2 /* DSAddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990CD11B418AF3004FF0B2 /* DSAddUserViewController.m */; };
+		53990CE91B42F415004FF0B2 /* DSAddUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990CE81B42F415004FF0B2 /* DSAddUserTableViewCell.m */; };
 		53A35C6C1AE3397B00CDE69E /* UserCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A35C6B1AE3397B00CDE69E /* UserCaseViewController.m */; };
 		53A35C6F1AE33E5F00CDE69E /* DoctorActicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A35C6E1AE33E5F00CDE69E /* DoctorActicleViewController.m */; };
 		53E0E1A21B1CA7FC00F1313F /* LoginBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E1A11B1CA7FC00F1313F /* LoginBaseViewController.m */; };
@@ -481,6 +487,20 @@
 		53990C861B39A173004FF0B2 /* DSContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSContactListTableViewController.m; sourceTree = "<group>"; };
 		53990C891B39B245004FF0B2 /* DSContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSContactTableViewCell.h; sourceTree = "<group>"; };
 		53990C8A1B39B245004FF0B2 /* DSContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSContactTableViewCell.m; sourceTree = "<group>"; };
+		53990CC21B40349B004FF0B2 /* DSRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRootNavigationController.h; sourceTree = "<group>"; };
+		53990CC31B40349B004FF0B2 /* DSRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRootNavigationController.m; sourceTree = "<group>"; };
+		53990CC51B404082004FF0B2 /* UIImage+comm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+comm.h"; sourceTree = "<group>"; };
+		53990CC61B404082004FF0B2 /* UIImage+comm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+comm.m"; sourceTree = "<group>"; };
+		53990CC81B404E90004FF0B2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		53990CC91B404E90004FF0B2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		53990CCA1B404FE3004FF0B2 /* UISearchBar+common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+common.h"; sourceTree = "<group>"; };
+		53990CCB1B404FE3004FF0B2 /* UISearchBar+common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+common.m"; sourceTree = "<group>"; };
+		53990CCD1B40510E004FF0B2 /* UIView+common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+common.h"; sourceTree = "<group>"; };
+		53990CCE1B40510E004FF0B2 /* UIView+common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+common.m"; sourceTree = "<group>"; };
+		53990CD01B418AF3004FF0B2 /* DSAddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAddUserViewController.h; sourceTree = "<group>"; };
+		53990CD11B418AF3004FF0B2 /* DSAddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAddUserViewController.m; sourceTree = "<group>"; };
+		53990CE71B42F415004FF0B2 /* DSAddUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAddUserTableViewCell.h; sourceTree = "<group>"; };
+		53990CE81B42F415004FF0B2 /* DSAddUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAddUserTableViewCell.m; sourceTree = "<group>"; };
 		53A35C6A1AE3397B00CDE69E /* UserCaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCaseViewController.h; sourceTree = "<group>"; };
 		53A35C6B1AE3397B00CDE69E /* UserCaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCaseViewController.m; sourceTree = "<group>"; };
 		53A35C6D1AE33E5F00CDE69E /* DoctorActicleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorActicleViewController.h; sourceTree = "<group>"; };
@@ -597,6 +617,7 @@
 		5307EAC31ABECE9300441823 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				53990CC11B40347F004FF0B2 /* RootVC */,
 				53990C651B398BF5004FF0B2 /* UserChat */,
 				533790C71B076218002824C0 /* leanCloud */,
 				53A35C691AE3395A00CDE69E /* UserCase */,
@@ -698,6 +719,12 @@
 				5307EAD81ABEFD3300441823 /* NSString+Common.m */,
 				5307EADA1ABF07A100441823 /* NSMutableString+Common.h */,
 				5307EADB1ABF07A100441823 /* NSMutableString+Common.m */,
+				53990CC51B404082004FF0B2 /* UIImage+comm.h */,
+				53990CC61B404082004FF0B2 /* UIImage+comm.m */,
+				53990CCA1B404FE3004FF0B2 /* UISearchBar+common.h */,
+				53990CCB1B404FE3004FF0B2 /* UISearchBar+common.m */,
+				53990CCD1B40510E004FF0B2 /* UIView+common.h */,
+				53990CCE1B40510E004FF0B2 /* UIView+common.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -1142,6 +1169,7 @@
 		53990C651B398BF5004FF0B2 /* UserChat */ = {
 			isa = PBXGroup;
 			children = (
+				53990CE61B42F3EF004FF0B2 /* cell */,
 				53990C7D1B39A09B004FF0B2 /* ChatViewController.h */,
 				53990C7E1B39A09B004FF0B2 /* ChatViewController.m */,
 				53990C7F1B39A09B004FF0B2 /* ChatViewController.xib */,
@@ -1153,6 +1181,8 @@
 				53990C7B1B399F0B004FF0B2 /* DSEasePageViewController.m */,
 				53990C851B39A173004FF0B2 /* DSContactListTableViewController.h */,
 				53990C861B39A173004FF0B2 /* DSContactListTableViewController.m */,
+				53990CD01B418AF3004FF0B2 /* DSAddUserViewController.h */,
+				53990CD11B418AF3004FF0B2 /* DSAddUserViewController.m */,
 			);
 			path = UserChat;
 			sourceTree = "<group>";
@@ -1185,6 +1215,24 @@
 			);
 			name = Chat;
 			path = View/Chat;
+			sourceTree = "<group>";
+		};
+		53990CC11B40347F004FF0B2 /* RootVC */ = {
+			isa = PBXGroup;
+			children = (
+				53990CC21B40349B004FF0B2 /* DSRootNavigationController.h */,
+				53990CC31B40349B004FF0B2 /* DSRootNavigationController.m */,
+			);
+			path = RootVC;
+			sourceTree = "<group>";
+		};
+		53990CE61B42F3EF004FF0B2 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				53990CE71B42F415004FF0B2 /* DSAddUserTableViewCell.h */,
+				53990CE81B42F415004FF0B2 /* DSAddUserTableViewCell.m */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		53A35C691AE3395A00CDE69E /* UserCase */ = {
@@ -1395,6 +1443,7 @@
 				5307EADC1ABF07A100441823 /* NSMutableString+Common.m in Sources */,
 				5307EB411AC6D62D00441823 /* UIView+WebCacheOperation.m in Sources */,
 				5307EAB21ABEBE7F00441823 /* AFHTTPRequestOperation.m in Sources */,
+				53990CC71B404082004FF0B2 /* UIImage+comm.m in Sources */,
 				5307EABF1ABEBE7F00441823 /* UIImageView+AFNetworking.m in Sources */,
 				533790751B075907002824C0 /* MJRefreshBaseView.m in Sources */,
 				5307EAD11ABEED2F00441823 /* DSTestVC.m in Sources */,
@@ -1403,6 +1452,7 @@
 				5381D4051AD8AC70004A4ADF /* BlogBaseTableViewCell.m in Sources */,
 				53990C761B399CD8004FF0B2 /* DSBaseNavigationController.m in Sources */,
 				5307EB3C1AC6D62D00441823 /* UIButton+WebCache.m in Sources */,
+				53990CCF1B40510E004FF0B2 /* UIView+common.m in Sources */,
 				5307EAFB1AC6965D00441823 /* LoginViewController.m in Sources */,
 				533790C21B075927002824C0 /* UUProgressHUD.m in Sources */,
 				5307EAC01ABEBE7F00441823 /* UIProgressView+AFNetworking.m in Sources */,
@@ -1434,7 +1484,9 @@
 				5307EB481AC6DD6500441823 /* YLImageView.m in Sources */,
 				5370EA311AC84AB100A1AC2B /* DSBaseTableViewController.m in Sources */,
 				533790CD1B076D29002824C0 /* DSChatModel.m in Sources */,
+				53990CC41B40349B004FF0B2 /* DSRootNavigationController.m in Sources */,
 				53990C6C1B399B42004FF0B2 /* SMPageControl.m in Sources */,
+				53990CD21B418AF3004FF0B2 /* DSAddUserViewController.m in Sources */,
 				53990C5A1B384AB2004FF0B2 /* JDStatusBarView.m in Sources */,
 				5307EB371AC6D62D00441823 /* SDWebImageDecoder.m in Sources */,
 				533790BD1B075927002824C0 /* UUInputFunctionView.m in Sources */,
@@ -1488,6 +1540,7 @@
 				5307EAB81ABEBE7F00441823 /* AFURLRequestSerialization.m in Sources */,
 				533790BE1B075927002824C0 /* UUMessage.m in Sources */,
 				53279CF91AD8EDC400593E17 /* UIColor+CreateMethods.m in Sources */,
+				53990CCC1B404FE3004FF0B2 /* UISearchBar+common.m in Sources */,
 				533790C01B075927002824C0 /* UUMessageContentButton.m in Sources */,
 				5307EAD41ABEFBDB00441823 /* HtmlMedia.m in Sources */,
 				53279CFA1AD8EDC400593E17 /* UIImageView+comm.m in Sources */,
@@ -1508,6 +1561,7 @@
 				5307EB401AC6D62D00441823 /* UIImageView+WebCache.m in Sources */,
 				5307EB351AC6D62D00441823 /* SDImageCache.m in Sources */,
 				53990C611B385794004FF0B2 /* DSFollowee.m in Sources */,
+				53990CE91B42F415004FF0B2 /* DSAddUserTableViewCell.m in Sources */,
 				534DA74B1B079DCC0093586E /* ChatNavigationViewController.m in Sources */,
 				53934FF41B338E9900FC9C7F /* UserContactTableViewController.m in Sources */,
 				533790C61B075FF4002824C0 /* LeanCloudManger.m in Sources */,
@@ -1537,6 +1591,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				533306F61ABDC0230054BA9E /* Base */,
+				53990CC81B404E90004FF0B2 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1545,6 +1600,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				533306FB1ABDC0230054BA9E /* Base */,
+				53990CC91B404E90004FF0B2 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

@@ -21,7 +21,9 @@
     // Override point for customization after application launch.
     [[AFNetworkActivityIndicatorManager sharedManager]setEnabled:YES];
     [DSRegisterModel registerModel];
+    
     [LeanCloudManger setUp];
+    [self customeUI];
     return YES;
 }
 
@@ -47,4 +49,28 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - custom UI
+- (void)customeUI{
+    [self statusBarstyle];
+    [self customNavigationBarColor];
+    [self customSearchBar];
+}
+- (void)statusBarstyle{
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+- (void)customNavigationBarColor{
+    UINavigationBar *apperance = [UINavigationBar appearance];
+    [apperance setBarTintColor:[UIColor colorWithHex:KNavigationBarTintColor alpha:1.0]];
+    NSDictionary *textAttributes = @{
+                                     NSFontAttributeName:[UIFont boldSystemFontOfSize:kNavTitleFontSize],
+                                     NSForegroundColorAttributeName:[UIColor whiteColor]
+                                     
+                                     };
+    [apperance setTintColor:[UIColor whiteColor]];
+    [apperance setTitleTextAttributes:textAttributes];
+}
+
+- (void)customSearchBar{
+    [[UISearchBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:KNavigationBarTintColor alpha:1.0]]];
+}
 @end

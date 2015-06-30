@@ -38,11 +38,27 @@
 }
 
 //汉字转拼音
-- (NSString *)chineseWordToPinyin:(NSString *)name{
-    NSMutableString *source = [name mutableCopy];
+- (NSString *)chineseWordToPinyin{
+    NSMutableString *source = [self mutableCopy];
     CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformMandarinLatin, NO);
     CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformStripDiacritics, NO);
     return source;
+}
+
+//生成A-Z字母
++ (NSMutableArray *)fromAtoZ{
+    
+    NSMutableArray *allLetter = [NSMutableArray array];
+    
+    for (char i = 'A'; i<'Z'+1; i++) {
+        char key[2];
+        key[0] = i;
+        key[1] = '\0';
+        
+        [allLetter addObject:[NSString stringWithUTF8String:key]];
+        
+    }
+    return allLetter;
 }
 
 @end

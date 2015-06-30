@@ -10,5 +10,5 @@
 
 @interface AMleftMenuHeader : UIView
 @property (nonatomic,strong) NSString *userName;
-@property (nonatomic,strong) UIImage *userImage;
+@property (weak, nonatomic) IBOutlet UIImageView *UserImageView;
 @end

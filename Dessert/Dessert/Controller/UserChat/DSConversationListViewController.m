@@ -17,13 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleDefault];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self configNavigationBar];
+}
 /*
 #pragma mark - Navigation
 
@@ -33,5 +37,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)configNavigationBar{
+    
+    [self.parentViewController.navigationItem setRightBarButtonItem:nil];
+}
+
+- (void)displaySearchView:(id)sender{
+
+}
 
 @end

@@ -15,6 +15,7 @@
     NSString *userName;
     NSString *email;
     NSString *password;
+    NSString *pinyinName;
     BOOL stringFormatCheck;
 }
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;

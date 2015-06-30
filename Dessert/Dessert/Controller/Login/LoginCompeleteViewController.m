@@ -58,6 +58,7 @@
     user.email = self.email;
     user.username = self.userName;
     user.password = self.passWord;
+    user.pinyinName = [self.userName chineseWordToPinyin];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (succeeded) {

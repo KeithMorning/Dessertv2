@@ -9,7 +9,7 @@
 #import "AMleftMenuHeader.h"
 
 @interface AMleftMenuHeader()
-@property (weak, nonatomic) IBOutlet UIImageView *UserImageView;
+
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 
 
@@ -32,10 +32,6 @@
     return self;
 }
 
-- (void)setUserImage:(UIImage *)userImage{
-    _userImage = userImage;
-    self.UserImageView.image = userImage;
-}
 
 - (void)setUserName:(NSString *)userName{
     _userName = userName;

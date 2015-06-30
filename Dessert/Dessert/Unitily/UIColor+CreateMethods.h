@@ -18,4 +18,6 @@
 // alpha - must be in range 0.0 - 1.0
 + (UIColor*)colorWithHex:(NSString*)hex alpha:(CGFloat)alpha;
 
++ (UIColor*)colorWithHex:(NSString *)hex;
+
 @end

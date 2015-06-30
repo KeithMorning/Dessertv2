@@ -156,7 +156,7 @@
 #pragma mark -
 #pragma mark - follower and followee
 - (void)getuserByName:(NSString *)name complete:(void(^)(DSAVUser *user))block{
-    AVQuery *query = [AVQuery queryWithClassName:@"_Users"];
+    AVQuery *query = [AVQuery queryWithClassName:@"_User"];
     [query whereKey:@"username" equalTo:name];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         block(objects[0]);
@@ -164,11 +164,10 @@
     
 }
 - (IBAction)followclick:(id)sender {
-    NSLog(@"%@",[self phonetic:@"keithMorning"]);
-//    WEAKSELF
-//    [self getuserByName:self.followUserTextField.text complete:^(DSAVUser *user) {
-//        [weakSelf addfollwee:user];
-//    }];
+    WEAKSELF
+    [self getuserByName:self.followUserTextField.text complete:^(DSAVUser *user) {
+        [weakSelf addfollwee:user];
+    }];
 }
 
 - (void)addfollwee:(DSAVUser *)user{
@@ -190,6 +189,19 @@
     CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformMandarinLatin, NO);
     CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformStripDiacritics, NO);
     return source;
+}
+- (IBAction)searchFollowee:(id)sender {
+    AVQuery *query = [AVQuery queryWithClassName:@"DSFollowee"];
+    DSAVUser *user = [DSAVUser currentUser];
+    [query whereKey:@"user" equalTo:user];
+    [query includeKey:@"followee"];
+    query.maxCacheAge = 24*3600;
+    query.cachePolicy = kPFCachePolicyNetworkElseCache;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSArray *follow = objects;
+        DSFollowee *followe = follow[0];
+        DSAVUser *user = followe.followee;
+    }];
 }
 
 @end

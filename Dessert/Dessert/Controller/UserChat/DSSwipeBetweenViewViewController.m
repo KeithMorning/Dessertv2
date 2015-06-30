@@ -23,13 +23,14 @@
         DSContactListTableViewController *contactVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"DSContactListTableViewController"];
         DSConversationListViewController *conversationVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"DSConversationListViewController"];
         self.viewControllerArray = [NSMutableArray new];
-        [self.viewControllerArray addObjectsFromArray:@[contactVC,conversationVC]];
+        [self.viewControllerArray addObjectsFromArray:@[conversationVC,contactVC]];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  //  self.navigationBar.barTintColor = [UIColor colorWithHex:KNavigationBarTintColor alpha:1.0];
     // Do any additional setup after loading the view.
 }
 
@@ -47,5 +48,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (UIViewController *)childViewControllerForStatusBarHidden{
+    return self.topViewController;
+}
 
+- (UIViewController *)childViewControllerForStatusBarStyle{
+    return self.topViewController;
+}
 @end
