@@ -12,7 +12,6 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import "JDStatusBarNotification.h"
 #import "DSContactTableViewCell.h"
-#import "DSFollowee.h"
 #import "UIColor+CreateMethods.h"
 #import "DSAddUserViewController.h"
 
@@ -40,7 +39,7 @@
     _oDrefreshControl = [[ODRefreshControl alloc] initInScrollView:self.tableView];
     [_oDrefreshControl addTarget:self action:@selector(refreshData:) forControlEvents:UIControlEventValueChanged];
     _isLoading = NO;
-    [_oDrefreshControl beginRefreshing];
+   [_oDrefreshControl beginRefreshing];
     [self refreshData:nil];
     
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
@@ -53,8 +52,15 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
    // [_oDrefreshControl beginRefreshing];
-     [self configNavigationBar];
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self configNavigationBar];
+    [self refreshUserList];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -88,24 +94,12 @@
     _isLoading = YES;
     DSAVUser *currentUser = [DSAVUser currentUser];
     if (currentUser) {
-        AVQuery *query = [AVQuery queryWithClassName:@"DSFollowee"];
-        [query whereKey:@"user" equalTo:currentUser];
-        [query includeKey:@"followee"];
-        [query includeKey:@"followee.userImage"];
-        query.maxCacheAge = 24*3600*365;
-        query.cachePolicy = kPFCachePolicyNetworkElseCache;
-        
         WEAKSELF
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            [self.oDrefreshControl endRefreshing];
-            _isLoading =NO;
+        [currentUser getFollowees:^(NSArray *objects, NSError *error) {
+            [weakSelf.oDrefreshControl endRefreshing];
+            _isLoading = NO;
             if (!error) {
-                NSMutableArray *tempArray = [NSMutableArray array];
-                for (DSFollowee *user in objects) {
-                    [tempArray addObject:user.followee];
-                }
-                 weakSelf.userList = tempArray;
-               // [JDStatusBarNotification showWithStatus:@"成功得到用户列表" dismissAfter:1.5 styleName:JDStatusBarStyleSuccess];
+                weakSelf.userList = objects;
                 weakSelf.userGoupDict = [weakSelf dictionaryUserByPinyin];
                 weakSelf.indexList = [weakSelf indexKeyList];
                 [weakSelf.tableView reloadData];
@@ -113,6 +107,7 @@
                 [JDStatusBarNotification showWithStatus:@"刷新失败" dismissAfter:1.5 styleName:JDStatusBarStyleWarning];
             }
         }];
+        
         
     }
 }

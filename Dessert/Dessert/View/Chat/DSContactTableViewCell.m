@@ -18,7 +18,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    self.nameLabel.textColor= [UIColor colorWithHex:kLabelColor];ß
+    self.nameLabel.textColor= [UIColor colorWithHex:kLabelColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

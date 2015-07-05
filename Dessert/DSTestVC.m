@@ -17,8 +17,6 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import "DSAVUser.h"
 
-#import "DSFollowee.h"
-#import "DSFollower.h"
 
 @interface DSTestVC()
 @property (weak, nonatomic) IBOutlet UILabel *LableTS;
@@ -172,16 +170,20 @@
 
 - (void)addfollwee:(DSAVUser *)user{
     NSLog(@"%@",[self phonetic:@"赵永琴"]);
-    DSFollowee *follee = [[DSFollowee alloc] init];
-    follee.user = [DSAVUser currentUser];
-    follee.followee = user;
-    [follee saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+   // DSFollowee *follee = [[DSFollowee alloc] init];
+   // follee.user = [DSAVUser currentUser];
+    //follee.followee = user;
+   // [follee addUniqueObject:user forKey:@"user"];
+    //[follee saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    
+    DSAVUser *auser = [DSAVUser currentUser];
+    [auser follow:user.objectId andCallback:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"success save follee");
-        }else{
-            NSLog(@"%@",error.localizedDescription);
         }
     }];
+    //[user follow:<#(NSString *)#> andCallback:<#^(BOOL succeeded, NSError *error)callback#>]
+    //[user follow:<#(NSString *)#> andCallback:<#^(BOOL succeeded, NSError *error)callback#>]
     
 }
 - (NSString *) phonetic:(NSString*)sourceString {
@@ -199,8 +201,8 @@
     query.cachePolicy = kPFCachePolicyNetworkElseCache;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         NSArray *follow = objects;
-        DSFollowee *followe = follow[0];
-        DSAVUser *user = followe.followee;
+       // DSFollowee *followe = follow[0];
+      //  DSAVUser *user = followe.followee;
     }];
 }
 

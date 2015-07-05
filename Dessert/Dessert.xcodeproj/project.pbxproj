@@ -157,8 +157,6 @@
 		53990C581B384AB2004FF0B2 /* JDStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990C531B384AB2004FF0B2 /* JDStatusBarNotification.m */; };
 		53990C591B384AB2004FF0B2 /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990C551B384AB2004FF0B2 /* JDStatusBarStyle.m */; };
 		53990C5A1B384AB2004FF0B2 /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990C571B384AB2004FF0B2 /* JDStatusBarView.m */; };
-		53990C5E1B3856F5004FF0B2 /* DSFollower.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990C5D1B3856F5004FF0B2 /* DSFollower.m */; };
-		53990C611B385794004FF0B2 /* DSFollowee.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990C601B385794004FF0B2 /* DSFollowee.m */; };
 		53990C641B3865D7004FF0B2 /* DSRegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990C631B3865D7004FF0B2 /* DSRegisterModel.m */; };
 		53990C681B398CAA004FF0B2 /* DSConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990C671B398CAA004FF0B2 /* DSConversationListViewController.m */; };
 		53990C6C1B399B42004FF0B2 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990C6B1B399B42004FF0B2 /* SMPageControl.m */; };
@@ -460,10 +458,6 @@
 		53990C551B384AB2004FF0B2 /* JDStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarStyle.m; sourceTree = "<group>"; };
 		53990C561B384AB2004FF0B2 /* JDStatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarView.h; sourceTree = "<group>"; };
 		53990C571B384AB2004FF0B2 /* JDStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarView.m; sourceTree = "<group>"; };
-		53990C5C1B3856F5004FF0B2 /* DSFollower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFollower.h; sourceTree = "<group>"; };
-		53990C5D1B3856F5004FF0B2 /* DSFollower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFollower.m; sourceTree = "<group>"; };
-		53990C5F1B385794004FF0B2 /* DSFollowee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFollowee.h; sourceTree = "<group>"; };
-		53990C601B385794004FF0B2 /* DSFollowee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFollowee.m; sourceTree = "<group>"; };
 		53990C621B3865D7004FF0B2 /* DSRegisterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRegisterModel.h; sourceTree = "<group>"; };
 		53990C631B3865D7004FF0B2 /* DSRegisterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRegisterModel.m; sourceTree = "<group>"; };
 		53990C661B398CAA004FF0B2 /* DSConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSConversationListViewController.h; sourceTree = "<group>"; };
@@ -865,10 +859,6 @@
 			children = (
 				532C4BF31B23471100C67A55 /* DSAVUser.h */,
 				532C4BF41B23471100C67A55 /* DSAVUser.m */,
-				53990C5C1B3856F5004FF0B2 /* DSFollower.h */,
-				53990C5D1B3856F5004FF0B2 /* DSFollower.m */,
-				53990C5F1B385794004FF0B2 /* DSFollowee.h */,
-				53990C601B385794004FF0B2 /* DSFollowee.m */,
 			);
 			path = AVCloudModel;
 			sourceTree = "<group>";
@@ -1535,7 +1525,6 @@
 				533790781B075907002824C0 /* MJRefreshHeaderView.m in Sources */,
 				53279D061AD9075200593E17 /* userExpericeTableViewCell.m in Sources */,
 				5307EB341AC6D62D00441823 /* NSData+ImageContentType.m in Sources */,
-				53990C5E1B3856F5004FF0B2 /* DSFollower.m in Sources */,
 				535159051AF999F40045B509 /* DSPoster.m in Sources */,
 				5307EAB81ABEBE7F00441823 /* AFURLRequestSerialization.m in Sources */,
 				533790BE1B075927002824C0 /* UUMessage.m in Sources */,
@@ -1560,7 +1549,6 @@
 				53990C731B399B4B004FF0B2 /* RKSwipeBetweenViewControllers.m in Sources */,
 				5307EB401AC6D62D00441823 /* UIImageView+WebCache.m in Sources */,
 				5307EB351AC6D62D00441823 /* SDImageCache.m in Sources */,
-				53990C611B385794004FF0B2 /* DSFollowee.m in Sources */,
 				53990CE91B42F415004FF0B2 /* DSAddUserTableViewCell.m in Sources */,
 				534DA74B1B079DCC0093586E /* ChatNavigationViewController.m in Sources */,
 				53934FF41B338E9900FC9C7F /* UserContactTableViewController.m in Sources */,

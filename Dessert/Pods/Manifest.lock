@@ -24,6 +24,7 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - FontAwesome+iOS (0.1.4)
+  - FSLineChart (0.1.7)
   - hpple (0.2.0)
   - Masonry (0.5.3)
   - MBProgressHUD (0.9)
@@ -75,6 +76,7 @@ DEPENDENCIES:
   - AVOSCloudIM
   - AVOSCloudSNS
   - BlocksKit (= 2.2.5)
+  - FSLineChart
   - hpple (= 0.2.0)
   - Masonry (= 0.5.3)
   - MBProgressHUD (= 0.9)
@@ -98,6 +100,7 @@ SPEC CHECKSUMS:
   AVOSCloudSNS: fa177d50fe83b630d684dd27d790358531b365cc
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   FontAwesome+iOS: 9070b682a9255ca0fdc34bcfb129ad0ba2b73b87
+  FSLineChart: 1b8d3727e8feb323144126d381184bf1b15e6efc
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   Masonry: 9f515466afe48632562342a40a1c224071a1a022
   MBProgressHUD: d8e7ea388dc1549a42e0d219067cf5f2c898fb66

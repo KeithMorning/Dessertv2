@@ -82,6 +82,12 @@
 #define COCOAPODS_VERSION_MINOR_BlocksKit_UIKit 2
 #define COCOAPODS_VERSION_PATCH_BlocksKit_UIKit 5
 
+// FSLineChart
+#define COCOAPODS_POD_AVAILABLE_FSLineChart
+#define COCOAPODS_VERSION_MAJOR_FSLineChart 0
+#define COCOAPODS_VERSION_MINOR_FSLineChart 1
+#define COCOAPODS_VERSION_PATCH_FSLineChart 7
+
 // FontAwesome+iOS
 #define COCOAPODS_POD_AVAILABLE_FontAwesome_iOS
 #define COCOAPODS_VERSION_MAJOR_FontAwesome_iOS 0

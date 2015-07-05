@@ -11,7 +11,6 @@
 @implementation DSRegisterModel
 
 + (void)registerModel{
-    [DSFollowee registerSubclass];
     [DSAVUser registerSubclass];
 }
 

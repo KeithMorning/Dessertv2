@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DSFollowee.h"
+#import "DSAVUser.h"
 
 @interface DSRegisterModel : NSObject
 

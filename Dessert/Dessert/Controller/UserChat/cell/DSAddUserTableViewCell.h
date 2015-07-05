@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DSAVUser.h"
 
 typedef NS_ENUM(NSUInteger, DSAddUserButtonType) {
     DSAddUserButtonTypeAdd,
@@ -14,6 +15,6 @@ typedef NS_ENUM(NSUInteger, DSAddUserButtonType) {
 };
 @interface DSAddUserTableViewCell : UITableViewCell
 
-- (void)configCell:(NSString *)username userImage:(NSString *)url buttonType:(DSAddUserButtonType)type;
+- (void)configCell:(DSAVUser *)addUser buttonType:(DSAddUserButtonType)type;
 
 @end
