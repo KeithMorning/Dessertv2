@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "684938B46B08AFF1F2C17634"
+               BlueprintIdentifier = "D2DB93A4989F86E63A7AA74D"
                BuildableName = "libPods-FSLineChart.a"
                BlueprintName = "Pods-FSLineChart"
                ReferencedContainer = "container:Pods.xcodeproj">

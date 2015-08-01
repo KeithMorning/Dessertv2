@@ -103,7 +103,7 @@
 
 - (void)getFollowerListDatasource:(void(^)()) compelete{
     DSAVUser *currentUser = [DSAVUser currentUser];
-    [currentUser getFollowers:^(NSArray *objects, NSError *error) {
+    [currentUser getFollowees:^(NSArray *objects, NSError *error) {
         _followee = objects;
         if (compelete) {
             compelete();
@@ -154,8 +154,6 @@
     }];
     
 }
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
-    //[self presentViewController:_searchVC animated:YES completion:nil];
-}
+
 
 @end

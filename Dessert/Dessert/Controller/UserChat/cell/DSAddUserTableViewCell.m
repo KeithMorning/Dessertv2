@@ -63,6 +63,8 @@
 - (IBAction)addButtonClick:(id)sender {
     NSString *message = nil;
     PSTAlertAction *action;
+    UIImage *buttonImage = [self getImageByType:self.userType];
+    [self.addButton setImage:buttonImage forState:UIControlStateNormal];
     WEAKSELF
     if (self.userType == DSAddUserButtonTypeAdd) {
         message = [NSString stringWithFormat:@"确定添加%@到你的朋友列表？",self.follower.username];
@@ -76,6 +78,7 @@
             [weakSelf addToMyFollowee];
         }];
     }
+    
     PSTAlertAction *cancelAction = [PSTAlertAction actionWithTitle:@"取消" style:PSTAlertActionStyleCancel handler:nil];
     PSTAlertController *alertContoller = [PSTAlertController alertWithTitle:@"提示" message:message];
     [alertContoller addAction:action];
@@ -92,18 +95,18 @@
             if (succeeded) {
                 weakSelf.userType = DSAddUserButtonTypeAdded;
                 UIImage *buttonImage = [weakSelf getImageByType:weakSelf.userType];
-                weakSelf.addButton.imageView.image = buttonImage;
+                [weakSelf.addButton setImage:buttonImage forState:UIControlStateNormal];
             }else{
                 [PSTAlertController presentDismissableAlertWithTitle:@"添加失败" message:@"网络不稳定,亲" controller:nil];
             }
         }];
 
     }else{   //remove a user
-        [self.follower unfollow:self.follower.objectId andCallback:^(BOOL succeeded, NSError *error) {
+        [currentUser unfollow:self.follower.objectId andCallback:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
                 weakSelf.userType = DSAddUserButtonTypeAdd;
                 UIImage *buttonImage = [weakSelf getImageByType:weakSelf.userType];
-                weakSelf.addButton.imageView.image = buttonImage;
+                [weakSelf.addButton setImage:buttonImage forState:UIControlStateNormal];
             }else{
                 [JDStatusBarNotification showWithStatus:@"删除失败了，重试一下？" dismissAfter:1.5 styleName:JDStatusBarStyleWarning];
             }

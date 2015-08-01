@@ -47,12 +47,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__53-[DSAddUserViewController getFollowerListDatasource:]_block_invoke:DSAddUserViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentUser">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[AMSlideMenuLeftMenuSegue perform]:AMSlideMenuLeftMenuSegue.m">
          <PersistentStrings>
             <PersistentString
                value = "initialIndexPath.row">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__52-[DSAddUserViewController getSearchresultWithInput:]_block_invoke_2:DSAddUserViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[DSTestVC addfollwee:]:DSTestVC.m">

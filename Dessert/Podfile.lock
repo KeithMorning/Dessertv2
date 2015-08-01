@@ -1,12 +1,10 @@
 PODS:
   - AMSlideMenu (1.5.4)
   - APParallaxHeader (0.1.6)
-  - AVOSCloud (3.1.1.1)
-  - AVOSCloudCrashReporting (3.1.1.1):
+  - AVOSCloud (3.1.2.9)
+  - AVOSCloudIM (3.1.2.9):
     - AVOSCloud
-  - AVOSCloudIM (3.1.1.1):
-    - AVOSCloud
-  - AVOSCloudSNS (3.1.1.1):
+  - AVOSCloudSNS (3.1.2.9):
     - AVOSCloud
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
@@ -28,7 +26,7 @@ PODS:
   - hpple (0.2.0)
   - Masonry (0.5.3)
   - MBProgressHUD (0.9)
-  - MJExtension (2.1.0)
+  - MJExtension (2.5.3)
   - MMMarkdown (0.4.3)
   - NYXImagesKit (2.3)
   - pop (1.0.7)
@@ -72,7 +70,6 @@ DEPENDENCIES:
   - AMSlideMenu
   - APParallaxHeader
   - AVOSCloud
-  - AVOSCloudCrashReporting
   - AVOSCloudIM
   - AVOSCloudSNS
   - BlocksKit (= 2.2.5)
@@ -94,17 +91,16 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AMSlideMenu: 8571937703d2b8e187b22c1416be4cafc3532a11
   APParallaxHeader: 854bc48a2487ca12c702f8a236fec0d89cdac5c3
-  AVOSCloud: 0c0b91ffd91f83b448312027e5f8b243f261c42a
-  AVOSCloudCrashReporting: 5add5ca29ec9f585010ecda3a643108c7e376e86
-  AVOSCloudIM: d3f1da845152724fa99350c8b1da559278d7bd68
-  AVOSCloudSNS: fa177d50fe83b630d684dd27d790358531b365cc
+  AVOSCloud: 7d2406a4954c15c98363ce841b257b81cdba0bc9
+  AVOSCloudIM: 07f8d18692923c70d909ec82b7776210d38535d5
+  AVOSCloudSNS: 4f9f1df8663fc7bfa76b9b38578ac535d275ee8f
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   FontAwesome+iOS: 9070b682a9255ca0fdc34bcfb129ad0ba2b73b87
   FSLineChart: 1b8d3727e8feb323144126d381184bf1b15e6efc
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   Masonry: 9f515466afe48632562342a40a1c224071a1a022
   MBProgressHUD: d8e7ea388dc1549a42e0d219067cf5f2c898fb66
-  MJExtension: d4fd481247b262b59cf8cdf5815661cff460aaa2
+  MJExtension: d636ed42d1af44cba81106ae7831cccb66906eb7
   MMMarkdown: faacc823952c6b63e85c6d2fd386f8ceab805430
   NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923

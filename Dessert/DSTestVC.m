@@ -198,7 +198,7 @@
     [query whereKey:@"user" equalTo:user];
     [query includeKey:@"followee"];
     query.maxCacheAge = 24*3600;
-    query.cachePolicy = kPFCachePolicyNetworkElseCache;
+    query.cachePolicy = kAVCachePolicyCacheThenNetwork;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         NSArray *follow = objects;
        // DSFollowee *followe = follow[0];

@@ -1168,11 +1168,11 @@
 				53990C771B399D80004FF0B2 /* DSSwipeBetweenViewViewController.h */,
 				53990C781B399D80004FF0B2 /* DSSwipeBetweenViewViewController.m */,
 				53990C7A1B399F0B004FF0B2 /* DSEasePageViewController.h */,
+				53990CD01B418AF3004FF0B2 /* DSAddUserViewController.h */,
+				53990CD11B418AF3004FF0B2 /* DSAddUserViewController.m */,
 				53990C7B1B399F0B004FF0B2 /* DSEasePageViewController.m */,
 				53990C851B39A173004FF0B2 /* DSContactListTableViewController.h */,
 				53990C861B39A173004FF0B2 /* DSContactListTableViewController.m */,
-				53990CD01B418AF3004FF0B2 /* DSAddUserViewController.h */,
-				53990CD11B418AF3004FF0B2 /* DSAddUserViewController.m */,
 			);
 			path = UserChat;
 			sourceTree = "<group>";
