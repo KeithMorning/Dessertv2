@@ -49,6 +49,7 @@
 
 //image
 #define kPlaceHolderImage @"userPlaceHolder"
+#define kPlcaeHodlerImageOnline @"http://ac-vcz6bokr.clouddn.com/91060add40dc0985.jpg";
 
 #define kUserImagePlaceholder [UIImage imageNamed:@"userPlaceHolder"]
 //常用变量

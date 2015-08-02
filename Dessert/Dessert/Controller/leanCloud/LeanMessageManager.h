@@ -34,6 +34,7 @@ typedef void(^DidReceiveTypedMessageBlock)(AVIMConversation *conversation, AVIMT
 + (instancetype)manager;
 
 - (NSString *)selfClientID;
+- (NSArray *)getChatUserList;
 
 - (void)setupDidReceiveCommonMessageCompletion:(DidReceiveCommonMessageBlock)didReceiveCommonMessageCompletion;
 
@@ -42,9 +43,9 @@ typedef void(^DidReceiveTypedMessageBlock)(AVIMConversation *conversation, AVIMT
 - (void)openSessionWithClientID:(NSString *)clientID
                      completion:(void (^)(BOOL succeeded, NSError *error))completion;
 
-- (void)createConversationsWithClientIDs:(NSArray *)clientIDs
-                        conversationType:(ConversationType)conversationType
-                              completion:(AVIMConversationResultBlock)completion;
+- (void)createConversationsWithUsers:(NSArray *)userList
+                    conversationType:(ConversationType)conversationType
+                          completion:(AVIMConversationResultBlock)completion;
 
 -(void)findRecentConversationsWithBlock:(AVIMArrayResultBlock)block;
 

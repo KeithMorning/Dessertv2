@@ -7,6 +7,7 @@
 //
 
 #import "LeanMessageManager.h"
+#import "DSAVUser.h"
 
 @interface LeanMessageManager () <AVIMClientDelegate>
 
@@ -18,6 +19,8 @@
 @property (nonatomic, copy) DidReceiveTypedMessageBlock didReceiveTypedMessageCompletion;
 
 @property (nonatomic, strong) NSMutableArray* recentConversations;
+
+@property (nonatomic,strong) NSArray *userChatList;
 
 @end
 
@@ -78,11 +81,15 @@
     }
 }
 
-- (void)createConversationsWithClientIDs:(NSArray *)clientIDs
+- (void)createConversationsWithUsers:(NSArray *)userList
                         conversationType:(ConversationType)conversationType
                               completion:(AVIMConversationResultBlock)completion {
-    NSMutableArray *targetClientIDs = [[NSMutableArray alloc] initWithArray:clientIDs];
-    [targetClientIDs insertObject:self.selfClientID atIndex:0];
+    NSMutableArray *targetClientIDs = [NSMutableArray array];
+    for (DSAVUser *user in userList) {
+        [targetClientIDs addObject:user.objectId];
+    }
+    self.userChatList = [NSArray arrayWithArray:userList];
+   // [targetClientIDs insertObject:self.selfClientID atIndex:0];
     [self createConversationsOnClientIDs:targetClientIDs conversationType:conversationType completion:completion];
 }
 
@@ -135,6 +142,10 @@
     if(self.didReceiveTypedMessageCompletion){
         self.didReceiveTypedMessageCompletion(conversation,message);
     }
+}
+
+- (NSArray *)getChatUserList{
+    return _userChatList;
 }
 
 @end

@@ -148,6 +148,7 @@
 		5381D4081AD8AC70004A4ADF /* BlogDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5381D4041AD8AC70004A4ADF /* BlogDetailView.xib */; };
 		5381D40C1AD8AE80004A4ADF /* userInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5381D40B1AD8AE80004A4ADF /* userInfoView.xib */; };
 		5381D40F1AD8AEA1004A4ADF /* userInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5381D40E1AD8AEA1004A4ADF /* userInfoView.m */; };
+		538D50361B6D267900543680 /* DSConversationListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D50351B6D267900543680 /* DSConversationListTableViewCell.m */; };
 		53934FF11B31D09300FC9C7F /* PSTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53934FF01B31D09300FC9C7F /* PSTAlertController.m */; };
 		53934FF41B338E9900FC9C7F /* UserContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53934FF31B338E9900FC9C7F /* UserContactTableViewController.m */; };
 		53978C161ADA9986000982C8 /* userExperienceHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53978C151ADA9986000982C8 /* userExperienceHeaderView.xib */; };
@@ -442,6 +443,8 @@
 		5381D40B1AD8AE80004A4ADF /* userInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userInfoView.xib; sourceTree = "<group>"; };
 		5381D40D1AD8AEA1004A4ADF /* userInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userInfoView.h; sourceTree = "<group>"; };
 		5381D40E1AD8AEA1004A4ADF /* userInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userInfoView.m; sourceTree = "<group>"; };
+		538D50341B6D267900543680 /* DSConversationListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSConversationListTableViewCell.h; sourceTree = "<group>"; };
+		538D50351B6D267900543680 /* DSConversationListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSConversationListTableViewCell.m; sourceTree = "<group>"; };
 		53934FEF1B31D09300FC9C7F /* PSTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAlertController.h; sourceTree = "<group>"; };
 		53934FF01B31D09300FC9C7F /* PSTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAlertController.m; sourceTree = "<group>"; };
 		53934FF21B338E9900FC9C7F /* UserContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserContactTableViewController.h; sourceTree = "<group>"; };
@@ -1168,9 +1171,9 @@
 				53990C771B399D80004FF0B2 /* DSSwipeBetweenViewViewController.h */,
 				53990C781B399D80004FF0B2 /* DSSwipeBetweenViewViewController.m */,
 				53990C7A1B399F0B004FF0B2 /* DSEasePageViewController.h */,
+				53990C7B1B399F0B004FF0B2 /* DSEasePageViewController.m */,
 				53990CD01B418AF3004FF0B2 /* DSAddUserViewController.h */,
 				53990CD11B418AF3004FF0B2 /* DSAddUserViewController.m */,
-				53990C7B1B399F0B004FF0B2 /* DSEasePageViewController.m */,
 				53990C851B39A173004FF0B2 /* DSContactListTableViewController.h */,
 				53990C861B39A173004FF0B2 /* DSContactListTableViewController.m */,
 			);
@@ -1221,6 +1224,8 @@
 			children = (
 				53990CE71B42F415004FF0B2 /* DSAddUserTableViewCell.h */,
 				53990CE81B42F415004FF0B2 /* DSAddUserTableViewCell.m */,
+				538D50341B6D267900543680 /* DSConversationListTableViewCell.h */,
+				538D50351B6D267900543680 /* DSConversationListTableViewCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1497,6 +1502,7 @@
 				53990C791B399D80004FF0B2 /* DSSwipeBetweenViewViewController.m in Sources */,
 				5307EAE91AC471A900441823 /* DSNetAPIManager.m in Sources */,
 				5307EB331AC6D62D00441823 /* ODRefreshControl.m in Sources */,
+				538D50361B6D267900543680 /* DSConversationListTableViewCell.m in Sources */,
 				5337907F1B075914002824C0 /* Mp3Recorder.m in Sources */,
 				5307EAC21ABEBE7F00441823 /* UIWebView+AFNetworking.m in Sources */,
 				533790D01B078D0E002824C0 /* LeanMessageManager.m in Sources */,

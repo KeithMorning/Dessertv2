@@ -13,14 +13,16 @@
 #import "ChatModel.h"
 #import "UUMessageFrame.h"
 #import "UUMessage.h"
+#import "ODRefreshControl.h"
 
 @interface ChatViewController ()<UUInputFunctionViewDelegate,UUMessageCellDelegate,UITableViewDataSource,UITableViewDelegate>
 
-@property (strong, nonatomic) MJRefreshHeaderView *head;
 @property (strong, nonatomic) ChatModel *chatModel;
 
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
+
+@property (nonatomic,strong) ODRefreshControl *oDRefreshControl;
 
 
 @end
@@ -31,11 +33,15 @@
 
 - (instancetype)initWithConversation:(AVIMConversation*)conversation
 {
-    self = [super init];
+    self = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ChatViewController"];
     if (self) {
         _conversation=conversation;
     }
     return self;
+}
+- (void)configNavigationBar{
+    
+    [self.parentViewController.navigationItem setRightBarButtonItem:nil];
 }
 
 
@@ -47,6 +53,12 @@
     IFView = [[UUInputFunctionView alloc]initWithSuperVC:self];
     IFView.delegate = self;
     [self.view addSubview:IFView];
+    [IFView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.leading.equalTo(self.view);
+        make.height.equalTo(@40);
+        make.top.equalTo(self.chatTableView.mas_bottom);
+    }];
+
     
     self.chatModel = [[ChatModel alloc] initWithConversation:_conversation];
     WEAKSELF
@@ -54,11 +66,13 @@
         [weakSelf.chatTableView reloadData];
         [weakSelf tableViewScrollToBottom];
     }];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+      [self configNavigationBar];
     
     //add notification
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChange:) name:UIKeyboardWillShowNotification object:nil];
@@ -79,29 +93,44 @@
 
 - (void)initBar
 {
-    self.title=@"Chat";
+    self.title=@"Cat";
     
     self.navigationController.navigationBar.tintColor = [UIColor grayColor];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:nil];
 }
 
 - (void)addRefreshViews
 {
+//    WEAKSELF
+//    _head = [MJRefreshHeaderView header];
+//    _head.scrollView = self.chatTableView;
+//    _head.beginRefreshingBlock = ^(MJRefreshBaseView *refreshView) {
+//        [weakSelf.chatModel loadOldMessageItemsWithBlock:^(NSInteger count) {
+//            [weakSelf.head endRefreshing];
+//            if(count>0){
+//                [weakSelf.chatTableView reloadData];
+//                if(weakSelf.chatModel.dataSource.count>count){
+//                    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:count inSection:0];
+//                    [weakSelf.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+//                }
+//            }
+//        }];
+//    };
+    
+     self.oDRefreshControl = [[ODRefreshControl alloc]initInScrollView:self.chatTableView];
+    [self.oDRefreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
+}
+- (void)reloadData{
     WEAKSELF
-    _head = [MJRefreshHeaderView header];
-    _head.scrollView = self.chatTableView;
-    _head.beginRefreshingBlock = ^(MJRefreshBaseView *refreshView) {
-        [weakSelf.chatModel loadOldMessageItemsWithBlock:^(NSInteger count) {
-            [weakSelf.head endRefreshing];
-            if(count>0){
-                [weakSelf.chatTableView reloadData];
-                if(weakSelf.chatModel.dataSource.count>count){
-                    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:count inSection:0];
-                    [weakSelf.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
-                }
+    [self.chatModel loadOldMessageItemsWithBlock:^(NSInteger count) {
+        [weakSelf.oDRefreshControl endRefreshing];
+        if(count>0){
+            [weakSelf.chatTableView reloadData];
+            if(weakSelf.chatModel.dataSource.count>count){
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:count inSection:0];
+                [weakSelf.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
             }
-        }];
-    };
+        }
+    }];
 }
 
 
@@ -130,9 +159,9 @@
     [self.view layoutIfNeeded];
     
     //adjust UUInputFunctionView's originPoint
-    CGRect newFrame = IFView.frame;
-    newFrame.origin.y = keyboardEndFrame.origin.y - newFrame.size.height;
-    IFView.frame = newFrame;
+//    CGRect newFrame = IFView.frame;
+//    newFrame.origin.y =keyboardEndFrame.origin.y - newFrame.size.height;
+//    IFView.frame = newFrame;
     
     [UIView commitAnimations];
     

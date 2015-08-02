@@ -6,8 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController">
             <connections>
-                <outlet property="bottomConstraint" destination="9ww-wb-9ZZ" id="aYt-8a-WhZ"/>
-                <outlet property="chatTableView" destination="cNW-cr-KDw" id="YUK-sd-VXJ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="0iY-Wi-CYJ"/>
             </connections>
         </placeholder>
@@ -19,17 +17,13 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cNW-cr-KDw">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="496"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="ZhN-bv-QpJ"/>
-                        <outlet property="delegate" destination="-1" id="MAq-Rn-wSV"/>
-                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="cNW-cr-KDw" secondAttribute="bottom" constant="40" id="9ww-wb-9ZZ"/>
                 <constraint firstItem="cNW-cr-KDw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HUj-XX-nVN"/>
-                <constraint firstItem="cNW-cr-KDw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="P5o-i0-Dsa"/>
+                <constraint firstItem="cNW-cr-KDw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QA5-tO-YEE"/>
                 <constraint firstAttribute="trailing" secondItem="cNW-cr-KDw" secondAttribute="trailing" id="izp-Vl-pTo"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

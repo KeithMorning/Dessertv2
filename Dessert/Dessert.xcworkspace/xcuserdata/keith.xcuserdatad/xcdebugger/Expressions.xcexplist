@@ -3,18 +3,54 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[DSContactListTableViewController configNavigationBar]:DSContactListTableViewController.m">
+         contextName = "-[DSTestVC saveAvo:]:DSTestVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.navigationController.navigationItem">
+               value = "DSAVUser currentUser">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__27-[DSTestVC searchFollowee:]_block_invoke:DSTestVC.m">
+         contextName = "-[AMSlideMenuLeftMenuSegue perform]:AMSlideMenuLeftMenuSegue.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "initialIndexPath.row">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[DSContactListTableViewController refreshUserList]:DSContactListTableViewController.m">
+         contextName = "__53-[DSAddUserViewController getFollowerListDatasource:]_block_invoke:DSAddUserViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentUser">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__43-[ChatModel loadMessagesWhenInitWithBlock:]_block_invoke_2:ChatModel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "mediaType">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DSAddUserTableViewCell addButtonClick:]:DSAddUserTableViewCell.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[DSContactListTableViewController initChatContoller:]:DSContactListTableViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__24-[DSTestVC followclick:]_block_invoke:DSTestVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ChatViewController viewDidLoad]:ChatViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ChatModel loadMessagesWhenInitWithBlock:]:ChatModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "__52-[DSAddUserViewController getSearchresultWithInput:]_block_invoke_2:DSAddUserViewController.m">
       </ContextState>
       <ContextState
          contextName = "__51-[DSContactListTableViewController refreshUserList]_block_invoke:DSContactListTableViewController.m">
@@ -28,15 +64,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__24-[DSTestVC followclick:]_block_invoke:DSTestVC.m">
+         contextName = "__27-[DSTestVC searchFollowee:]_block_invoke:DSTestVC.m">
       </ContextState>
       <ContextState
-         contextName = "-[DSTestVC saveAvo:]:DSTestVC.m">
+         contextName = "-[ChatModel messageDictionaryByAVIMTypedMessage:]:ChatModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[DSContactListTableViewController configNavigationBar]:DSContactListTableViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "DSAVUser currentUser">
+               value = "self.navigationController.navigationItem">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DSContactListTableViewController refreshUserList]:DSContactListTableViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[DSContactTableViewCell configCellWithUser:]:DSContactTableViewCell.m">
@@ -45,25 +87,6 @@
                value = "user.userImage">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__53-[DSAddUserViewController getFollowerListDatasource:]_block_invoke:DSAddUserViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "currentUser">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[AMSlideMenuLeftMenuSegue perform]:AMSlideMenuLeftMenuSegue.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "initialIndexPath.row">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__52-[DSAddUserViewController getSearchresultWithInput:]_block_invoke_2:DSAddUserViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[DSTestVC addfollwee:]:DSTestVC.m">

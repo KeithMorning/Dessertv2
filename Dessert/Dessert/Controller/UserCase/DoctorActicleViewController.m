@@ -97,17 +97,6 @@
             }else{
                 type=ConversationTypeOneToOne;
             }
-            [[LeanMessageManager manager] createConversationsWithClientIDs:clientIDs conversationType:type completion:^(AVIMConversation *conversation, NSError *error) {
-                if(error){
-                    NSLog(@"error=%@",error);
-                }else{
-                    ChatViewController *vc=[[ChatViewController alloc] initWithConversation:conversation];
-                    //vc.view.frame = weakSelf.detailVc.view.bounds;
-                    //[weakSelf.detailVc.view addSubview:vc.view];
-                    [weakSelf.detailVc presentViewController:vc animated:YES completion:nil];
-                   
-                }
-            }];
         }else{
             NSLog(@"error=%@",error);
         }

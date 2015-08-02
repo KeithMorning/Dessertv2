@@ -8,6 +8,7 @@
 
 #import "ChatModel.h"
 #import "LeanMessageManager.h"
+#import "DSAVUser.h"
 
 #import "UUMessage.h"
 #import "UUMessageFrame.h"
@@ -239,15 +240,33 @@
  * 配置头像
  */
 - (NSString*)avatarUrlByClientId:(NSString*)clientId{
-    NSDictionary *urls=@{kMichaelClientID:@"http://www.120ask.com/static/upload/clinic/article/org/201311/201311061651418413.jpg",kBettyClientID:@"http://p1.qqyou.com/touxiang/uploadpic/2011-3/20113212244659712.jpg",kLindaClientID:@"http://www.qqzhi.com/uploadpic/2014-09-14/004638238.jpg"};
-    return urls[clientId];
+    NSArray *userlist = [[LeanMessageManager manager] getChatUserList];
+    for (DSAVUser *tempUser in userlist) {
+        if ([tempUser.objectId isEqualToString:clientId]) {
+            if (tempUser.userImage.url) {
+                 return tempUser.userImage.url;
+            }
+            break;
+           
+        }
+    }
+    return kPlcaeHodlerImageOnline;
 }
 
 /**
  * 配置用户名
  */
 - (NSString*)displayNameByClientId:(NSString*)clientId{
-    return clientId;
+    NSArray *userlist = [[LeanMessageManager manager] getChatUserList];
+    for (DSAVUser *tempUser in userlist) {
+        if ([tempUser.objectId isEqualToString:clientId]) {
+            if (tempUser.username) {
+                  return tempUser.username;
+            }
+            break;
+        }
+    }
+    return @"unknowUser";
 }
 
 @end

@@ -14,6 +14,8 @@
 #import "DSContactTableViewCell.h"
 #import "UIColor+CreateMethods.h"
 #import "DSAddUserViewController.h"
+#import "LeanMessageManager.h"
+#import "ChatViewController.h"
 
 @interface DSContactListTableViewController ()<UISearchBarDelegate,UISearchDisplayDelegate>
 @property (nonatomic,strong) ODRefreshControl *oDrefreshControl;
@@ -29,17 +31,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
    
     _userList = [NSArray new];
     _oDrefreshControl = [[ODRefreshControl alloc] initInScrollView:self.tableView];
     [_oDrefreshControl addTarget:self action:@selector(refreshData:) forControlEvents:UIControlEventValueChanged];
     _isLoading = NO;
-   [_oDrefreshControl beginRefreshing];
+    [_oDrefreshControl beginRefreshing];
     [self refreshData:nil];
     
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
@@ -53,8 +50,6 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-   // [_oDrefreshControl beginRefreshing];
-    
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -63,9 +58,12 @@
     [self.tableView reloadData];
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+}
+
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
-    [self.parentViewController.navigationItem setHidesBackButton:YES animated:YES];
 }
 
 
@@ -184,6 +182,33 @@
     return index;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DSAVUser *user = self.userList[indexPath.row];
+    WEAKSELF
+    [[LeanMessageManager manager] openSessionWithClientID:[DSAVUser currentUser].objectId completion:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [weakSelf createConversationOneToOne:user];
+        }else{//TODO: offline into
+        
+        }
+    }];
+}
+#pragma mark - Conversation
+- (void)createConversationOneToOne:(DSAVUser *)user{
+    DSAVUser *selfUser =[DSAVUser currentUser];
+    NSArray *array = @[selfUser,user];
+    WEAKSELF
+    [[LeanMessageManager manager] createConversationsWithUsers:array conversationType:ConversationTypeOneToOne completion:^(AVIMConversation *conversation, NSError *error) {
+        [weakSelf initChatContoller:conversation];
+    }];
+}
+
+- (void)initChatContoller:(AVIMConversation *)conversation{
+    ChatViewController *chatVc =[[ChatViewController alloc] initWithConversation:conversation];
+    [self.navigationController pushViewController:chatVc animated:YES];
+    
+}
+
 #pragma mark - contact list sortby Pinyin
 
 - (NSDictionary *)dictionaryUserByPinyin{
@@ -250,10 +275,6 @@
     
     [keyList insertObject:UITableViewIndexSearch atIndex:0];
     return keyList;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
 }
 
 

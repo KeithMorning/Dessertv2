@@ -9,6 +9,8 @@
 #import "UUInputFunctionView.h"
 #import "Mp3Recorder.h"
 #import "UUProgressHUD.h"
+#import <Masonry/Masonry.h>
+
 @interface UUInputFunctionView ()<UITextViewDelegate,Mp3RecorderDelegate>
 {
     BOOL isbeginVoiceRecord;
@@ -27,9 +29,10 @@
 - (id)initWithSuperVC:(UIViewController *)superVC
 {
     self.superVC = superVC;
-    CGRect frame = CGRectMake(0, Main_Screen_Height-40, Main_Screen_Width, 40);
+    CGRect frame = CGRectMake(0,Main_Screen_Height-40-20-44, Main_Screen_Width, 40);
     
     self = [super initWithFrame:frame];
+    
     if (self) {
         MP3 = [[Mp3Recorder alloc]initWithDelegate:self];
         self.backgroundColor = [UIColor whiteColor];
