@@ -708,28 +708,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dessert/Controller/UserChat/DSContactListTableViewController.m"
-            timestampString = "460201642.279195"
+            timestampString = "460944307.856741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "-dictionaryUserByPinyin"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Dessert/Controller/UserChat/DSContactListTableViewController.m"
-            timestampString = "460201642.279195"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "-tableView:titleForHeaderInSection:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -804,7 +788,7 @@
                   moduleName = "Dessert"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/keith/Documents/Dessert/Dessertv2/Dessert/Dessert/Model/ChatModel.m"
-                  timestampString = "460201741.652656"
+                  timestampString = "460944659.275381"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -819,7 +803,7 @@
                   moduleName = "Dessert"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/keith/Documents/Dessert/Dessertv2/Dessert/Dessert/Model/ChatModel.m"
-                  timestampString = "460201741.656507"
+                  timestampString = "460944659.275713"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -835,13 +819,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dessert/Controller/leanCloud/LeanMessageManager.m"
-            timestampString = "460201629.636896"
+            filePath = "Dessert/Model/ChatModel.m"
+            timestampString = "460943183.441449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-createConversationsOnClientIDs:conversationType:completion:"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-loadOldMessageItemsWithBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

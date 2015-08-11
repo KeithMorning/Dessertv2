@@ -98,7 +98,7 @@
                             completion:(AVIMConversationResultBlock)completion {
     AVIMConversationQuery *query = [self.leanClient conversationQuery];
     NSMutableArray *queryClientIDs = [[NSMutableArray alloc] initWithArray:clientIDs];
-    [queryClientIDs insertObject:self.selfClientID atIndex:0];
+   // [queryClientIDs insertObject:self.selfClientID atIndex:0];
     [query whereKey:kAVIMKeyMember containsAllObjectsInArray:queryClientIDs];
     [query whereKey:AVIMAttr(@"type") equalTo:[NSNumber numberWithInt:conversationType]];
     [query findConversationsWithCallback:^(NSArray *objects, NSError *error) {

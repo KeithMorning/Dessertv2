@@ -183,7 +183,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    DSAVUser *user = self.userList[indexPath.row];
+    NSArray *datalist = self.userGoupDict[[self indexKeyList][indexPath.section+1]];
+    DSAVUser *user = [datalist objectAtIndex:indexPath.row];
     WEAKSELF
     [[LeanMessageManager manager] openSessionWithClientID:[DSAVUser currentUser].objectId completion:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
