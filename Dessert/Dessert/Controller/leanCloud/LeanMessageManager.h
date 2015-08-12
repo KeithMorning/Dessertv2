@@ -12,10 +12,6 @@
 
 #define WEAKSELF typeof(self) __weak weakSelf = self;
 
-static NSString *kMichaelClientID=@"Michael";
-static NSString *kBettyClientID=@"Betty";
-static NSString *kLindaClientID=@"linda";
-
 #define kDidReceiveCommonMessageNotification @"didReceiveCommonMessageNotification"
 #define kDidReceiveTypedMessageNotification @"didReceiveTypedMessageNotification"
 

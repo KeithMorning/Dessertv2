@@ -181,6 +181,7 @@
 		53E0E1A21B1CA7FC00F1313F /* LoginBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E1A11B1CA7FC00F1313F /* LoginBaseViewController.m */; };
 		53E0E1A51B1CAF3D00F1313F /* LoginCompeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E1A41B1CAF3D00F1313F /* LoginCompeleteViewController.m */; };
 		53F16BB11B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F16BB01B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m */; };
+		7F423BA71B7B585F00D245C6 /* DSLeanUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F423BA61B7B585F00D245C6 /* DSLeanUserManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -508,6 +509,8 @@
 		53E0E1A41B1CAF3D00F1313F /* LoginCompeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCompeleteViewController.m; sourceTree = "<group>"; };
 		53F16BAF1B2C84D5007E61A3 /* AMLeftMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMLeftMenuTableViewCell.h; sourceTree = "<group>"; };
 		53F16BB01B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMLeftMenuTableViewCell.m; sourceTree = "<group>"; };
+		7F423BA51B7B585F00D245C6 /* DSLeanUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLeanUserManager.h; sourceTree = "<group>"; };
+		7F423BA61B7B585F00D245C6 /* DSLeanUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLeanUserManager.m; sourceTree = "<group>"; };
 		84D42DE750BD585EA5AE3BAF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ECF0BA536EDD6583E28E7727 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1038,6 +1041,8 @@
 				533790CF1B078D0E002824C0 /* LeanMessageManager.m */,
 				533790C41B075FF4002824C0 /* LeanCloudManger.h */,
 				533790C51B075FF4002824C0 /* LeanCloudManger.m */,
+				7F423BA51B7B585F00D245C6 /* DSLeanUserManager.h */,
+				7F423BA61B7B585F00D245C6 /* DSLeanUserManager.m */,
 			);
 			path = leanCloud;
 			sourceTree = "<group>";
@@ -1472,6 +1477,7 @@
 				5307EB3F1AC6D62D00441823 /* UIImageView+HighlightedWebCache.m in Sources */,
 				5307EB391AC6D62D00441823 /* SDWebImageDownloaderOperation.m in Sources */,
 				53934FF11B31D09300FC9C7F /* PSTAlertController.m in Sources */,
+				7F423BA71B7B585F00D245C6 /* DSLeanUserManager.m in Sources */,
 				53051C9A1ACAE8B30055BC05 /* DSTextCGSize.m in Sources */,
 				5381D40F1AD8AEA1004A4ADF /* userInfoView.m in Sources */,
 				53A35C6F1AE33E5F00CDE69E /* DoctorActicleViewController.m in Sources */,

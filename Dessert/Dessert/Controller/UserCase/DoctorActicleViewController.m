@@ -81,10 +81,7 @@
     return 130;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self openSessionByClientId:kBettyClientID navigationToIMWithTargetClientIDs:@[kMichaelClientID]];
-    
-}
+
 
 
 - (void)openSessionByClientId:(NSString*)clientId navigationToIMWithTargetClientIDs:(NSArray *)clientIDs {
