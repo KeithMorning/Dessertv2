@@ -708,11 +708,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dessert/Controller/UserChat/DSContactListTableViewController.m"
-            timestampString = "460944307.856741"
+            timestampString = "461031910.721513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
             landmarkName = "-dictionaryUserByPinyin"
             landmarkType = "5">
          </BreakpointContent>
@@ -788,7 +788,7 @@
                   moduleName = "Dessert"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/keith/Documents/Dessert/Dessertv2/Dessert/Dessert/Model/ChatModel.m"
-                  timestampString = "460944659.275381"
+                  timestampString = "461031981.342325"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -803,7 +803,7 @@
                   moduleName = "Dessert"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/keith/Documents/Dessert/Dessertv2/Dessert/Dessert/Model/ChatModel.m"
-                  timestampString = "460944659.275713"
+                  timestampString = "461031981.342548"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -827,6 +827,54 @@
             endingLineNumber = "47"
             landmarkName = "-loadOldMessageItemsWithBlock:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dessert/Model/ChatModel.m"
+            timestampString = "461029821.823069"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "-sendMessage:block:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ChatModel sendMessage:block:]"
+                  moduleName = "Dessert"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keith/Documents/Dessert/Dessertv2/Dessert/Dessert/Model/ChatModel.m"
+                  timestampString = "461031981.344143"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "81">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__31-[ChatModel sendMessage:block:]_block_invoke"
+                  moduleName = "Dessert"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keith/Documents/Dessert/Dessertv2/Dessert/Dessert/Model/ChatModel.m"
+                  timestampString = "461031981.344323"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

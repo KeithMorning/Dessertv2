@@ -93,7 +93,11 @@
     DSAVUser *currentUser = [DSAVUser currentUser];
     if (currentUser) {
         WEAKSELF
-        [currentUser getFollowees:^(NSArray *objects, NSError *error) {
+        AVQuery *query = [AVUser followeeQuery:currentUser.objectId];
+        [query includeKey:@"followee"];
+        query.cachePolicy =kAVCachePolicyNetworkElseCache;
+        query.maxCacheAge = 24*3600*30;
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             [weakSelf.oDrefreshControl endRefreshing];
             _isLoading = NO;
             if (!error) {
@@ -105,8 +109,7 @@
                 [JDStatusBarNotification showWithStatus:@"刷新失败" dismissAfter:1.5 styleName:JDStatusBarStyleWarning];
             }
         }];
-        
-        
+
     }
 }
 
