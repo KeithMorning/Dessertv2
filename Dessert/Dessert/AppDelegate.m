@@ -10,6 +10,7 @@
 #import "AFNetworkActivityIndicatorManager.h"
 #import "LeanCloudManger.h"
 #import "DSRegisterModel.h"
+#import "DSGlobal.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[AFNetworkActivityIndicatorManager sharedManager]setEnabled:YES];
+    
+    [DSGlobal globalInit];
     [DSRegisterModel registerModel];
     
     [LeanCloudManger setUp];

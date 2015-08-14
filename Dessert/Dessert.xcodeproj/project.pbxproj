@@ -181,6 +181,7 @@
 		53E0E1A21B1CA7FC00F1313F /* LoginBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E1A11B1CA7FC00F1313F /* LoginBaseViewController.m */; };
 		53E0E1A51B1CAF3D00F1313F /* LoginCompeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E1A41B1CAF3D00F1313F /* LoginCompeleteViewController.m */; };
 		53F16BB11B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F16BB01B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m */; };
+		7F14140E1B7D87D400D650D4 /* DSGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F14140D1B7D87D400D650D4 /* DSGlobal.m */; };
 		7F423BA71B7B585F00D245C6 /* DSLeanUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F423BA61B7B585F00D245C6 /* DSLeanUserManager.m */; };
 		7F423BAC1B7C3CF300D245C6 /* DSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F423BAB1B7C3CF300D245C6 /* DSManager.m */; };
 /* End PBXBuildFile section */
@@ -510,6 +511,8 @@
 		53E0E1A41B1CAF3D00F1313F /* LoginCompeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCompeleteViewController.m; sourceTree = "<group>"; };
 		53F16BAF1B2C84D5007E61A3 /* AMLeftMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMLeftMenuTableViewCell.h; sourceTree = "<group>"; };
 		53F16BB01B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMLeftMenuTableViewCell.m; sourceTree = "<group>"; };
+		7F14140C1B7D87D400D650D4 /* DSGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGlobal.h; sourceTree = "<group>"; };
+		7F14140D1B7D87D400D650D4 /* DSGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGlobal.m; sourceTree = "<group>"; };
 		7F423BA51B7B585F00D245C6 /* DSLeanUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLeanUserManager.h; sourceTree = "<group>"; };
 		7F423BA61B7B585F00D245C6 /* DSLeanUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLeanUserManager.m; sourceTree = "<group>"; };
 		7F423BAA1B7C3CF300D245C6 /* DSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSManager.h; sourceTree = "<group>"; };
@@ -1270,6 +1273,8 @@
 				533790C71B076218002824C0 /* leanCloud */,
 				7F423BAA1B7C3CF300D245C6 /* DSManager.h */,
 				7F423BAB1B7C3CF300D245C6 /* DSManager.m */,
+				7F14140C1B7D87D400D650D4 /* DSGlobal.h */,
+				7F14140D1B7D87D400D650D4 /* DSGlobal.m */,
 			);
 			path = DSManager;
 			sourceTree = "<group>";
@@ -1485,6 +1490,7 @@
 				533976251AD42D4C002FAD85 /* LeftMenuViewController.m in Sources */,
 				53990C721B399B4B004FF0B2 /* EasePageViewController.m in Sources */,
 				5307EB361AC6D62D00441823 /* SDWebImageCompat.m in Sources */,
+				7F14140E1B7D87D400D650D4 /* DSGlobal.m in Sources */,
 				5381D4071AD8AC70004A4ADF /* BlogDetailView.m in Sources */,
 				5307EB381AC6D62D00441823 /* SDWebImageDownloader.m in Sources */,
 				53978C191ADA999C000982C8 /* userExperienceHeaderView.m in Sources */,
