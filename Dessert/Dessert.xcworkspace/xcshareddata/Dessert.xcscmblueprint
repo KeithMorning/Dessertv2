@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A789510E59385246AD5C5049423EE3F04AE5048D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "646fb212-6d06-11e3-a2a4-57cd746879f3++1155" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A789510E59385246AD5C5049423EE3F04AE5048D" : 0,
+    "646fb212-6d06-11e3-a2a4-57cd746879f3++1155" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6F2D1A49-46B8-4D86-A61A-3B28A6671139",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A789510E59385246AD5C5049423EE3F04AE5048D" : "Dessertv2",
+    "646fb212-6d06-11e3-a2a4-57cd746879f3++1155" : "Dessertv2\/Dessert\/Dessert\/Vendor\/MJRefresh\/MJRefresh.bundle"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Dessert",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Dessert\/Dessert.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/192.168.0.179\/BloodSugar",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "646fb212-6d06-11e3-a2a4-57cd746879f3++1155"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/KeithMorning\/Dessertv2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A789510E59385246AD5C5049423EE3F04AE5048D"
+    }
+  ]
+}

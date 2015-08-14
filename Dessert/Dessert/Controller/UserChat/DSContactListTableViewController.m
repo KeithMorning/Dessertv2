@@ -16,10 +16,10 @@
 #import "DSAddUserViewController.h"
 #import "LeanMessageManager.h"
 #import "ChatViewController.h"
+#import "DSLeanUserManager.h"
 
 @interface DSContactListTableViewController ()<UISearchBarDelegate,UISearchDisplayDelegate>
 @property (nonatomic,strong) ODRefreshControl *oDrefreshControl;
-@property (nonatomic,strong) NSArray *userList;
 @property (nonatomic) BOOL isLoading;
 @property (nonatomic,strong) NSDictionary *userGoupDict;
 @property (nonatomic,strong) NSArray *indexList;
@@ -32,7 +32,6 @@
     [super viewDidLoad];
     
    
-    _userList = [NSArray new];
     _oDrefreshControl = [[ODRefreshControl alloc] initInScrollView:self.tableView];
     [_oDrefreshControl addTarget:self action:@selector(refreshData:) forControlEvents:UIControlEventValueChanged];
     _isLoading = NO;
@@ -93,20 +92,14 @@
     DSAVUser *currentUser = [DSAVUser currentUser];
     if (currentUser) {
         WEAKSELF
-        AVQuery *query = [AVUser followeeQuery:currentUser.objectId];
-        [query includeKey:@"followee"];
-        query.cachePolicy =kAVCachePolicyNetworkElseCache;
-        query.maxCacheAge = 24*3600*30;
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        [[DSLeanUserManager manager] updateCurrentUserFollowees:^(BOOL success, NSError *error) {
             [weakSelf.oDrefreshControl endRefreshing];
             _isLoading = NO;
-            if (!error) {
-                weakSelf.userList = objects;
-                weakSelf.userGoupDict = [weakSelf dictionaryUserByPinyin];
-                weakSelf.indexList = [weakSelf indexKeyList];
-                [weakSelf.tableView reloadData];
+            if (success) {
+                weakSelf.userGoupDict = [[DSLeanUserManager manager] userFolloweeGroupBySpelling];
+                weakSelf.indexList    = [[DSLeanUserManager manager] userFollweesIndex];
             }else{
-                [JDStatusBarNotification showWithStatus:@"刷新失败" dismissAfter:1.5 styleName:JDStatusBarStyleWarning];
+              [JDStatusBarNotification showWithStatus:@"刷新失败" dismissAfter:1.5 styleName:JDStatusBarStyleWarning];
             }
         }];
 
@@ -155,7 +148,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     
-    NSArray *datalist = self.userGoupDict[[self indexKeyList][section+1]];
+    NSArray *datalist = self.userGoupDict[self.indexList[section+1]];
     return datalist.count;
 }
 
@@ -163,7 +156,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DSContactTableViewCell *cell = (DSContactTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"DSContactCell" forIndexPath:indexPath];
     
-    NSArray *datalist = self.userGoupDict[[self indexKeyList][indexPath.section+1]];
+    NSArray *datalist = self.userGoupDict[self.indexList[indexPath.section+1]];
     
     DSAVUser *tempuser = [datalist objectAtIndex:indexPath.row];
     if (tempuser) {
@@ -174,7 +167,7 @@
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
-    return [self indexKeyList];
+    return self.indexList;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
@@ -186,14 +179,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSArray *datalist = self.userGoupDict[[self indexKeyList][indexPath.section+1]];
+    NSArray *datalist = self.userGoupDict[self.indexList[indexPath.section+1]];
     DSAVUser *user = [datalist objectAtIndex:indexPath.row];
     WEAKSELF
     [[LeanMessageManager manager] openSessionWithClientID:[DSAVUser currentUser].objectId completion:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             [weakSelf createConversationOneToOne:user];
         }else{//TODO: offline into
-        
+            [weakSelf createConversationOneToOne:user];
         }
     }];
 }
@@ -212,75 +205,6 @@
     [self.navigationController pushViewController:chatVc animated:YES];
     
 }
-
-#pragma mark - contact list sortby Pinyin
-
-- (NSDictionary *)dictionaryUserByPinyin{
-    if (_userList.count <=0) {
-        return @{@"#":[NSMutableArray new]};
-    }
-    
-    NSMutableDictionary *userGroupDict = [NSMutableDictionary new];
-    NSMutableArray *allkeys = [NSString fromAtoZ];
-    [allkeys addObject:@"#"];
-    
-    for (NSString *keystr in allkeys) {
-        [userGroupDict setObject:[NSMutableArray new] forKey:keystr];
-    }
-    
-    [self.userList enumerateObjectsUsingBlock:^(DSAVUser *obj, NSUInteger idx, BOOL *stop) {
-        NSString *keystr = nil;
-        NSMutableArray *dataArray = [NSMutableArray new];
-        
-        if (obj.pinyinName.length>1) {
-            keystr = [obj.pinyinName substringToIndex:1];
-            keystr = [keystr uppercaseString];
-            if ([[userGroupDict allKeys]containsObject:keystr]) {
-                dataArray = userGroupDict[keystr];
-            }
-            
-            if (!dataArray) {
-                dataArray = [NSMutableArray new];
-            }
-            [dataArray addObject:obj];
-            [userGroupDict setObject:dataArray forKey:keystr];
-        }
-    }];
-    
-    for (NSString *str in allkeys) {
-        NSMutableArray *tempArray = [userGroupDict objectForKey:str];
-        if (tempArray.count <=0) {
-            [userGroupDict removeObjectForKey:str];
-        }
-        if (tempArray.count>1) {
-            [tempArray sortUsingComparator:^NSComparisonResult(DSAVUser *obj1, DSAVUser *obj2) {
-                return [obj1.pinyinName compare: obj2.pinyinName];
-            }];
-        }
-    }
-    return userGroupDict;
-}
-
-- (NSArray *)indexKeyList{
-    
-    if (self.userGoupDict.count<=0) {
-        return nil;
-    }
-    
-    NSMutableArray *keyList = [NSMutableArray arrayWithArray:[self.userGoupDict allKeys]];
-    if ([keyList containsObject:@"#"]) {
-        [keyList removeObject:@"#"];
-        [keyList addObject:@"#"];
-    }
-    
-    [keyList sortUsingComparator:^NSComparisonResult(NSString *obj1, NSString *obj2) {
-        return [obj1 compare:obj2];
-    }];
-    
-    [keyList insertObject:UITableViewIndexSearch atIndex:0];
-    return keyList;
-}
-
 
 
 #pragma mark - Search bar Delegate

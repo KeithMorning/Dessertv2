@@ -9,6 +9,7 @@
 #import "LeanCloudManger.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import <AVOSCloudIM/AVOSCloudIM.h>
+#import "DSLeanUserManager.h"
 
 @implementation LeanCloudManger
 
@@ -21,6 +22,10 @@
     [AVLogger addLoggerDomain:AVLoggerDomainCURL];
     [AVLogger setLoggerLevelMask:AVLoggerLevelAll];
 #endif
+}
+
+- (void)LeanCloudInit{
+
 }
 
 @end

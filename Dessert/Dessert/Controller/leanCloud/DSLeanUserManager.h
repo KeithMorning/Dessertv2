@@ -9,19 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "DSAVUser.h"
 
-typedef void(^DSAVUserResult)(NSArray *object, NSError *error);
+typedef void(^DSAVUserResultBlcok)(BOOL success, NSError *error);
 
 @interface DSLeanUserManager : NSObject
 
+@property (nonatomic,strong,readonly) NSArray *userFollowees;
+@property (nonatomic,strong,readonly) NSDictionary *userFolloweeGroupBySpelling;
+@property (nonatomic,strong,readonly) NSArray *userFollweesIndex;
+
+@property (nonatomic,strong,readonly) NSArray *userFollowers;
+@property (nonatomic,strong,readonly) NSDictionary *userFollowersGroupBySpelling;
+@property (nonatomic,strong,readonly) NSArray *userFollwersIndex;
+
 + (instancetype)manager;
 
-- (NSArray *)getUserFollowees;
-- (NSArray *)getUserFollowers;
-
-- (void)updateUserFollowees:(DSAVUserResult)callBack;
-- (void)updateUserFollowers:(DSAVUserResult)callBack;
-
-- (NSArray *)findUserBySpelling:(NSString *)string;
+- (void)updateCurrentUserFollowees:(DSAVUserResultBlcok)callBack;
+- (void)updateCurrentUserFollowers:(DSAVUserResultBlcok)callBack;
 
 - (BOOL)checkIsUserFollowees:(DSAVUser *)user;
 

@@ -101,6 +101,7 @@
    // [queryClientIDs insertObject:self.selfClientID atIndex:0];
     [query whereKey:kAVIMKeyMember containsAllObjectsInArray:queryClientIDs];
     [query whereKey:AVIMAttr(@"type") equalTo:[NSNumber numberWithInt:conversationType]];
+    query.cacheMaxAge = HUGE_VAL;
     [query findConversationsWithCallback:^(NSArray *objects, NSError *error) {
         if (error) {
             // 出错了，请稍候重试

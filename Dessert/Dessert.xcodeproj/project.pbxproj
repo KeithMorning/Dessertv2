@@ -182,6 +182,7 @@
 		53E0E1A51B1CAF3D00F1313F /* LoginCompeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E1A41B1CAF3D00F1313F /* LoginCompeleteViewController.m */; };
 		53F16BB11B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F16BB01B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m */; };
 		7F423BA71B7B585F00D245C6 /* DSLeanUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F423BA61B7B585F00D245C6 /* DSLeanUserManager.m */; };
+		7F423BAC1B7C3CF300D245C6 /* DSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F423BAB1B7C3CF300D245C6 /* DSManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -511,6 +512,8 @@
 		53F16BB01B2C84D5007E61A3 /* AMLeftMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMLeftMenuTableViewCell.m; sourceTree = "<group>"; };
 		7F423BA51B7B585F00D245C6 /* DSLeanUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLeanUserManager.h; sourceTree = "<group>"; };
 		7F423BA61B7B585F00D245C6 /* DSLeanUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLeanUserManager.m; sourceTree = "<group>"; };
+		7F423BAA1B7C3CF300D245C6 /* DSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSManager.h; sourceTree = "<group>"; };
+		7F423BAB1B7C3CF300D245C6 /* DSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSManager.m; sourceTree = "<group>"; };
 		84D42DE750BD585EA5AE3BAF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ECF0BA536EDD6583E28E7727 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -619,7 +622,6 @@
 			children = (
 				53990CC11B40347F004FF0B2 /* RootVC */,
 				53990C651B398BF5004FF0B2 /* UserChat */,
-				533790C71B076218002824C0 /* leanCloud */,
 				53A35C691AE3395A00CDE69E /* UserCase */,
 				53279CFF1AD8F0BC00593E17 /* UserInfo */,
 				5339761F1AD42CDC002FAD85 /* AMSlideMenu */,
@@ -893,6 +895,7 @@
 		533306EA1ABDC0230054BA9E /* Dessert */ = {
 			isa = PBXGroup;
 			children = (
+				7F423BA91B7C3CD900D245C6 /* DSManager */,
 				535158FD1AF992CA0045B509 /* DessertFileManager */,
 				5307EB031AC69D5D00441823 /* resource */,
 				5307EACD1ABEE6DB00441823 /* Dessert_PRH.pch */,
@@ -1044,7 +1047,8 @@
 				7F423BA51B7B585F00D245C6 /* DSLeanUserManager.h */,
 				7F423BA61B7B585F00D245C6 /* DSLeanUserManager.m */,
 			);
-			path = leanCloud;
+			name = leanCloud;
+			path = ../Controller/leanCloud;
 			sourceTree = "<group>";
 		};
 		5339761F1AD42CDC002FAD85 /* AMSlideMenu */ = {
@@ -1258,6 +1262,16 @@
 				14AEA055D69349657A31DFAA /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F423BA91B7C3CD900D245C6 /* DSManager */ = {
+			isa = PBXGroup;
+			children = (
+				533790C71B076218002824C0 /* leanCloud */,
+				7F423BAA1B7C3CF300D245C6 /* DSManager.h */,
+				7F423BAB1B7C3CF300D245C6 /* DSManager.m */,
+			);
+			path = DSManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1486,6 +1500,7 @@
 				5370EA311AC84AB100A1AC2B /* DSBaseTableViewController.m in Sources */,
 				533790CD1B076D29002824C0 /* DSChatModel.m in Sources */,
 				53990CC41B40349B004FF0B2 /* DSRootNavigationController.m in Sources */,
+				7F423BAC1B7C3CF300D245C6 /* DSManager.m in Sources */,
 				53990C6C1B399B42004FF0B2 /* SMPageControl.m in Sources */,
 				53990CD21B418AF3004FF0B2 /* DSAddUserViewController.m in Sources */,
 				53990C5A1B384AB2004FF0B2 /* JDStatusBarView.m in Sources */,
