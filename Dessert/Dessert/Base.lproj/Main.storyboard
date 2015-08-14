@@ -928,7 +928,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014/09/03" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYr-YJ-WQg">
-                                            <rect key="frame" x="509" y="0.0" width="70.5" height="20.5"/>
+                                            <rect key="frame" x="509" y="0.0" width="71" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="70.5" id="amo-p4-xsv"/>
                                             </constraints>
@@ -944,7 +944,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsz-fE-La2">
-                                            <rect key="frame" x="66" y="1" width="403" height="19.5"/>
+                                            <rect key="frame" x="66" y="1" width="403" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -1152,7 +1152,7 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lh-A7-yfa">
-                                            <rect key="frame" x="548" y="2.5" width="44" height="44"/>
+                                            <rect key="frame" x="548" y="3" width="44" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="44" id="7UQ-Oe-uSF"/>
                                                 <constraint firstAttribute="height" constant="44" id="qqT-a5-aDA"/>

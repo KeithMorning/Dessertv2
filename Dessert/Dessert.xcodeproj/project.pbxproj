@@ -184,6 +184,7 @@
 		7F14140E1B7D87D400D650D4 /* DSGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F14140D1B7D87D400D650D4 /* DSGlobal.m */; };
 		7F423BA71B7B585F00D245C6 /* DSLeanUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F423BA61B7B585F00D245C6 /* DSLeanUserManager.m */; };
 		7F423BAC1B7C3CF300D245C6 /* DSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F423BAB1B7C3CF300D245C6 /* DSManager.m */; };
+		7F876F061B7DF0CF00AA9E3A /* DSImageViewWithBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F876F051B7DF0CF00AA9E3A /* DSImageViewWithBadge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -517,6 +518,8 @@
 		7F423BA61B7B585F00D245C6 /* DSLeanUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLeanUserManager.m; sourceTree = "<group>"; };
 		7F423BAA1B7C3CF300D245C6 /* DSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSManager.h; sourceTree = "<group>"; };
 		7F423BAB1B7C3CF300D245C6 /* DSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSManager.m; sourceTree = "<group>"; };
+		7F876F041B7DF0CF00AA9E3A /* DSImageViewWithBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSImageViewWithBadge.h; sourceTree = "<group>"; };
+		7F876F051B7DF0CF00AA9E3A /* DSImageViewWithBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSImageViewWithBadge.m; sourceTree = "<group>"; };
 		84D42DE750BD585EA5AE3BAF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ECF0BA536EDD6583E28E7727 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -686,6 +689,8 @@
 				53051C991ACAE8B30055BC05 /* DSTextCGSize.m */,
 				532C4BF61B23506100C67A55 /* DSHud.h */,
 				532C4BF71B23506100C67A55 /* DSHud.m */,
+				7F876F041B7DF0CF00AA9E3A /* DSImageViewWithBadge.h */,
+				7F876F051B7DF0CF00AA9E3A /* DSImageViewWithBadge.m */,
 			);
 			path = Unitily;
 			sourceTree = "<group>";
@@ -1464,6 +1469,7 @@
 				5307EAB21ABEBE7F00441823 /* AFHTTPRequestOperation.m in Sources */,
 				53990CC71B404082004FF0B2 /* UIImage+comm.m in Sources */,
 				5307EABF1ABEBE7F00441823 /* UIImageView+AFNetworking.m in Sources */,
+				7F876F061B7DF0CF00AA9E3A /* DSImageViewWithBadge.m in Sources */,
 				533790751B075907002824C0 /* MJRefreshBaseView.m in Sources */,
 				5307EAD11ABEED2F00441823 /* DSTestVC.m in Sources */,
 				5307EAE61AC453DC00441823 /* DSUser.m in Sources */,
